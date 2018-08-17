@@ -7,7 +7,7 @@
   "author": "Markus Graube <markus.graube@tu-dresden.de>",
   "scripts": {
     "build": "tsc",
-    "predeploy": "npm run build"
+    "prepublish": "npm run build"
   },
   "publishConfig": {
     "registry": "http://registry.plt.et.tu-dresden.de:4873"
