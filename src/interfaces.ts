@@ -11,7 +11,7 @@ export interface ModuleInterface {
     id: string;
     endpoint: string;
     connected: boolean;
-    services: ServiceInterface[];
+    services?: ServiceInterface[];
 }
 
 export interface ServiceInterface {

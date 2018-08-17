@@ -6,8 +6,7 @@
   "types": "dist/index.d.ts",
   "author": "Markus Graube <markus.graube@tu-dresden.de>",
   "scripts": {
-    "build": "tsc",
-    "prepublish": "npm run build"
+    "prepublish": "tsc"
   },
   "publishConfig": {
     "registry": "http://registry.plt.et.tu-dresden.de:4873"
