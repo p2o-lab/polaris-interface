@@ -1,0 +1,16 @@
+{
+  "name": "pfe-interface",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "predeploy": "npm run build"
+  },
+  "publishConfig": {
+    "registry": "http://registry.plt.et.tu-dresden.de:4873"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  }
+}
