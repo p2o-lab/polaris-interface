@@ -1,8 +1,10 @@
 {
   "name": "pfe-interface",
+  "description": "interface defintions for pfe-ree-node and pfe-viz",
   "version": "0.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "author": "Markus Graube <markus.graube@tu-dresden.de>",
   "scripts": {
     "build": "tsc",
     "predeploy": "npm run build"

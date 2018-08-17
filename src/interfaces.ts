@@ -1,4 +1,4 @@
-import {RecipeOptions} from "./RecipeOptions";
+import {RecipeOptions} from "./options";
 
 export interface RecipeManagerInterface {
     recipe_status: string;
