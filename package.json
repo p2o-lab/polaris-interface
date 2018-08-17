@@ -1,10 +1,12 @@
 {
   "name": "pfe-interface",
   "description": "interface defintions for pfe-ree-node and pfe-viz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Markus Graube <markus.graube@tu-dresden.de>",
+  "repository": "svn@dev.plt.et.tu-dresden.de:modulare-automation/pfe-ree-interface.git",
+  "homepage": "https://dev.plt.et.tu-dresden.de/modulare-automation/pfe-ree-interface",
   "scripts": {
     "prepublish": "tsc"
   },

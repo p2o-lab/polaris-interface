@@ -11,5 +11,14 @@ export {RecipeOptions,
     TransitionOptions,
     OperationOptions,
     ParameterOptions} from './options';
-export {RecipeManagerInterface,ModuleInterface, ServiceInterface} from './interfaces';
-export {ServiceCommand,ConditionType} from './enum';
+export {
+    RecipeManagerInterface,
+    ModuleInterface,
+    ServiceInterface,
+    ParameterInterface,
+    StrategyInterface
+} from './interfaces';
+export {
+    ServiceCommand,
+    ConditionType
+} from './enum';

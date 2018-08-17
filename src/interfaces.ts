@@ -20,3 +20,17 @@ export interface ServiceInterface {
     status: string | number;
     strategies: any[];
 }
+
+export interface StrategyInterface {
+    id: string;
+    name: string;
+    default: boolean;
+    parameters: ParameterInterface[];
+}
+
+export interface ParameterInterface {
+    name: string;
+    value?: number;
+    min?: number;
+    max?: number;
+}
