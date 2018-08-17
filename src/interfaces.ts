@@ -6,3 +6,17 @@ export interface RecipeManagerInterface {
     current_step: any;
     options: RecipeOptions;
 }
+
+export interface ModuleInterface {
+    id: string;
+    endpoint: string;
+    connected: boolean;
+    services: ServiceInterface[];
+}
+
+export interface ServiceInterface {
+    name: string;
+    opMode: string;
+    status: string;
+    strategies: any[];
+}
