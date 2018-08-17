@@ -16,7 +16,7 @@ export interface ModuleInterface {
 
 export interface ServiceInterface {
     name: string;
-    opMode: string;
-    status: string;
+    opMode: string | number;
+    status: string | number;
     strategies: any[];
 }
