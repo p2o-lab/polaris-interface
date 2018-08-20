@@ -3,6 +3,7 @@ import {RecipeOptions} from "./options";
 export interface RecipeManagerInterface {
     recipe_status: string;
     service_states: object[];
+    modules: string[];
     current_step: any;
     options: RecipeOptions;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "pfe-interface",
+  "name": "pfe-ree-interface",
   "description": "interface defintions for pfe-ree-node and pfe-viz",
   "version": "1.1.0",
   "main": "dist/index.js",
