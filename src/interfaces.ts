@@ -4,7 +4,7 @@ export interface ManagerInterface {
     modules: string[];
     recipeName: string;
     recipeStatus: string;
-    autoReset: boolean
+    autoReset: boolean;
 }
 
 export interface RecipeInterface {
