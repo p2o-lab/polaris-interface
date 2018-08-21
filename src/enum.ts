@@ -1,13 +1,13 @@
 export type ServiceCommand =
-    "reset"
-    | "start"
-    | "stop"
-    | "unhold"
-    | "pause"
-    | "resume"
-    | "abort"
-    | "restart"
-    | "complete"
+    'reset'
+    | 'start'
+    | 'stop'
+    | 'unhold'
+    | 'pause'
+    | 'resume'
+    | 'abort'
+    | 'restart'
+    | 'complete';
 
 export enum ConditionType {
     not = 'not',
