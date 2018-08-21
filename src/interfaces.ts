@@ -1,9 +1,11 @@
-import {RecipeOptions} from "./options";
+import { RecipeOptions } from './options';
 
 export interface ManagerInterface {
     modules: string[];
-    recipeName: string;
-    recipeStatus: string;
+    recipe?: {
+        name: string;
+        status: string;
+    };
     autoReset: boolean;
 }
 
