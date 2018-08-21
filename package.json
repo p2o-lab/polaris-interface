@@ -11,7 +11,7 @@
     "prepublish": "tsc"
   },
   "publishConfig": {
-    "registry": "http://registry.plt.et.tu-dresden.de:4873"
+    "registry": "https://registry.plt.et.tu-dresden.de:4873"
   },
   "devDependencies": {
     "tslint": "^5.11.0",
