@@ -1,10 +1,16 @@
 import {RecipeOptions} from "./options";
 
-export interface RecipeManagerInterface {
-    recipe_status: string;
-    service_states: object[];
+export interface ManagerInterface {
     modules: string[];
-    current_step: any;
+    recipeName: string;
+    recipeStatus: string;
+    autoReset: boolean
+}
+
+export interface RecipeInterface {
+    status: string;
+    modules: object[];
+    currentStep: any;
     options: RecipeOptions;
 }
 

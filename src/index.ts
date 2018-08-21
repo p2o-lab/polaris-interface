@@ -12,10 +12,11 @@ export {RecipeOptions,
     OperationOptions,
     ParameterOptions} from './options';
 export {
-    RecipeManagerInterface,
+    ManagerInterface,
     ModuleInterface,
     ServiceInterface,
     ParameterInterface,
+    RecipeInterface,
     StrategyInterface
 } from './interfaces';
 export {
