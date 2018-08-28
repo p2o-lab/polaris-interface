@@ -2,7 +2,7 @@ import { RecipeOptions } from './options';
 
 export interface ManagerInterface {
     modules: string[];
-    recipe?: {
+    activeRecipe?: {
         name: string;
         status: string;
     };
@@ -10,6 +10,7 @@ export interface ManagerInterface {
 }
 
 export interface RecipeInterface {
+    id: string;
     status: string;
     modules: object[];
     currentStep: any;
@@ -28,12 +29,14 @@ export interface ServiceInterface {
     opMode: string | number;
     status: string | number;
     strategies: any[];
+    parameters: ParameterInterface[];
 }
 
 export interface StrategyInterface {
     id: string;
     name: string;
     default: boolean;
+    sc: boolean;
     parameters: ParameterInterface[];
 }
 
