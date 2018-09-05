@@ -17,9 +17,14 @@ export {
     ServiceInterface,
     ParameterInterface,
     RecipeInterface,
-    StrategyInterface
+    StrategyInterface,
+    PlayerInterface,
+    StepInterface,
+    OperationInterface,
+    TransitionInterface
 } from './interfaces';
 export {
     ServiceCommand,
-    ConditionType
+    ConditionType,
+    RecipeState
 } from './enum';
