@@ -11,6 +11,7 @@ export {RecipeOptions,
     TransitionOptions,
     OperationOptions,
     ParameterOptions} from './options';
+
 export {
     ManagerInterface,
     ModuleInterface,
@@ -23,6 +24,7 @@ export {
     OperationInterface,
     TransitionInterface
 } from './interfaces';
+
 export {
     ServiceCommand,
     ConditionType,
