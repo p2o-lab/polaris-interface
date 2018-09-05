@@ -26,5 +26,6 @@ export {
 export {
     ServiceCommand,
     ConditionType,
-    RecipeState
+    RecipeState,
+    Repeat
 } from './enum';

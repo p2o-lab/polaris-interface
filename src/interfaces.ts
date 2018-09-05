@@ -3,10 +3,7 @@ import {RecipeState, Repeat, ServiceCommand} from './enum';
 
 export interface ManagerInterface {
     modules: string[];
-    activeRecipe?: {
-        name: string;
-        status: string;
-    };
+    activeRecipe?: RecipeInterface;
     autoReset: boolean;
 }
 
