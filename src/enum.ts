@@ -1,13 +1,14 @@
-export type ServiceCommand =
-    'reset'
-    | 'start'
-    | 'stop'
-    | 'unhold'
-    | 'pause'
-    | 'resume'
-    | 'abort'
-    | 'restart'
-    | 'complete';
+export enum ServiceCommand {
+    reset = 'reset',
+    start = 'start',
+    stop = 'stop',
+    unhold = 'unhold',
+    pause = 'pause',
+    resume = 'resume',
+    abort = 'abort',
+    restart = 'restart',
+    complete = 'complete'
+}
 
 export enum ConditionType {
     not = 'not',
@@ -16,4 +17,12 @@ export enum ConditionType {
     variable = 'variable',
     and = 'and',
     or = 'or'
+}
+
+export enum RecipeState {
+    idle = 'idle',
+    running = 'running',
+    stopped = 'stopped',
+    completed = 'completed',
+    paused = 'paused'
 }

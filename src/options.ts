@@ -1,4 +1,4 @@
-import {ConditionType, ServiceCommand} from "./enum";
+import { ConditionType, ServiceCommand } from './enum';
 
 export interface RecipeOptions {
     version: string;
@@ -15,7 +15,7 @@ export interface StepOptions {
 }
 
 export interface OperationOptions {
-    // module id (can be ommited if only one module is registered)
+    // module id (can be omitted if only one module is registered)
     module?: string;
     // service name
     service: string;
@@ -80,5 +80,5 @@ export interface VariableConditionOptions extends BaseConditionOptions {
     variable: string;
     dataStructure: string;
     value: string | number;
-    operator: "==" | "<=" | ">=" | ">" | "<";
+    operator: '==' | '<=' | '>=' | '>' | '<';
 }

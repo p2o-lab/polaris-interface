@@ -1,4 +1,5 @@
-import { RecipeOptions } from './options';
+import { ConditionOptions, ParameterOptions, RecipeOptions } from './options';
+import { RecipeState, ServiceCommand } from './enum';
 
 export interface ManagerInterface {
     modules: string[];
@@ -11,9 +12,9 @@ export interface ManagerInterface {
 
 export interface RecipeInterface {
     id: string;
-    status: string;
-    modules: object[];
-    currentStep: any;
+    status: RecipeState;
+    modules: ModuleInterface[];
+    currentStep: StepInterface;
     options: RecipeOptions;
 }
 
@@ -45,4 +46,23 @@ export interface ParameterInterface {
     value?: number;
     min?: number;
     max?: number;
+}
+
+export interface StepInterface {
+    name: string;
+    transitions: TransitionInterface[];
+    operations: OperationInterface[];
+}
+
+export interface TransitionInterface {
+    next_step: string;
+    condition: ConditionOptions;
+}
+
+export interface OperationInterface {
+    module: string;
+    service: string;
+    strategy?: string;
+    command: ServiceCommand;
+    parameter?: ParameterOptions;
 }
