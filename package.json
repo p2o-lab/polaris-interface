@@ -8,7 +8,7 @@
   "repository": "svn@dev.plt.et.tu-dresden.de:modulare-automation/pfe-ree-interface.git",
   "homepage": "https://dev.plt.et.tu-dresden.de/modulare-automation/pfe-ree-interface",
   "scripts": {
-    "prepublish": "tsc"
+    "preparee": "tsc"
   },
   "publishConfig": {
     "registry": "https://registry.plt.et.tu-dresden.de:4873"

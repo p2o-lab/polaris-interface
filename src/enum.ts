@@ -26,3 +26,10 @@ export enum RecipeState {
     completed = 'completed',
     paused = 'paused'
 }
+
+export enum Repeat {
+    single = 'single',
+    all = 'all',
+    none = 'none'
+}
+

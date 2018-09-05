@@ -1,5 +1,5 @@
 import { ConditionOptions, ParameterOptions, RecipeOptions } from './options';
-import { RecipeState, ServiceCommand } from './enum';
+import {RecipeState, Repeat, ServiceCommand} from './enum';
 
 export interface ManagerInterface {
     modules: string[];
@@ -64,5 +64,12 @@ export interface OperationInterface {
     service: string;
     strategy?: string;
     command: ServiceCommand;
-    parameter?: ParameterOptions;
+    parameter?: ParameterOptions[];
+}
+
+export interface PlayerInterface {
+    playlist: RecipeInterface[];
+    currentItem: number;
+    repeat: Repeat;
+    status: RecipeState;
 }
