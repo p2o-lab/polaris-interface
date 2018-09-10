@@ -33,16 +33,18 @@ export interface ParameterOptions {
     variable: string;
     value: string | number | boolean;
     // scope which should be used to replace variables in value
-    scope?: {
-        // name of variable which should be replaced in value
-        name: string;
-        // module id (can be omitted if only one module is registered)
-        module?: string;
-        service?: string;
-        strategy?: string;
-        dataAssembly: string;
-        variable: string;
-    };
+    scope?: ScopeOptions[];
+}
+
+export interface ScopeOptions {
+    // name of variable which should be replaced in value
+    name: string;
+    // module id (can be omitted if only one module is registered)
+    module?: string;
+    service?: string;
+    strategy?: string;
+    dataAssembly: string;
+    variable: string;
 }
 
 export interface TransitionOptions {
