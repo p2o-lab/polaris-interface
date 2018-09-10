@@ -10,7 +10,8 @@ export {RecipeOptions,
     StepOptions,
     TransitionOptions,
     OperationOptions,
-    ParameterOptions} from './options';
+    ParameterOptions,
+    ScopeOptions} from './options';
 
 export {
     ManagerInterface,
