@@ -31,7 +31,18 @@ export interface ParameterOptions {
     name: string;
     // default: "VExt" für variable wenn nicht angegeben
     variable: string;
-    value: any;
+    value: string | number | boolean;
+    // scope which should be used to replace variables in value
+    scope?: {
+        // name of variable which should be replaced in value
+        name: string;
+        // module id (can be omitted if only one module is registered)
+        module?: string;
+        service?: string;
+        strategy?: string;
+        dataAssembly: string;
+        variable: string;
+    };
 }
 
 export interface TransitionOptions {
@@ -63,7 +74,7 @@ export interface NotConditionOptions extends BaseConditionOptions {
 
 export interface StateConditionOptions extends BaseConditionOptions {
     type: ConditionType.state;
-    // module id (can be ommited if only one module is registered)
+    // module id (can be omitted if only one module is registered)
     module?: string;
     service: string;
     state: string;
@@ -77,8 +88,8 @@ export interface TimeConditionOptions extends BaseConditionOptions {
 export interface VariableConditionOptions extends BaseConditionOptions {
     type: ConditionType.variable;
     module: string;
+    dataAssembly: string;
     variable: string;
-    dataStructure: string;
     value: string | number;
     operator: '==' | '<=' | '>=' | '>' | '<';
 }
