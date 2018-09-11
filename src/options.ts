@@ -1,4 +1,4 @@
-import { ConditionType, ServiceCommand } from './enum';
+import {ConditionType, ServiceCommand} from './enum';
 
 export interface RecipeOptions {
     version: string;
@@ -9,8 +9,11 @@ export interface RecipeOptions {
 }
 
 export interface StepOptions {
+    // unique name of step
     name: string;
+    // array of operations performed when entering step
     operations: OperationOptions[];
+    // array of transition to be checked during step
     transitions: TransitionOptions[];
 }
 
@@ -19,7 +22,7 @@ export interface OperationOptions {
     module?: string;
     // service name
     service: string;
-    // strategy kann weggelassen werden, dann wird die Default-Strategy genommen
+    // strategy name (default strategy is used if omitted)
     strategy?: string;
     // command name
     command: ServiceCommand;
@@ -28,9 +31,11 @@ export interface OperationOptions {
 }
 
 export interface ParameterOptions {
+    // name of dataAssembly of parameter in module JSON
     name: string;
-    // default: "VExt" für variable wenn nicht angegeben
-    variable: string;
+    // variable name of dataAssembly (default: "VExt" if omitted)
+    variable?: string;
+    // value of parameter. Can be a number or a string with an expression which is interpreted using scope
     value: string | number | boolean;
     // scope which should be used to replace variables in value
     scope?: ScopeOptions[];
@@ -78,12 +83,14 @@ export interface StateConditionOptions extends BaseConditionOptions {
     type: ConditionType.state;
     // module id (can be omitted if only one module is registered)
     module?: string;
+    // service name
     service: string;
     state: string;
 }
 
 export interface TimeConditionOptions extends BaseConditionOptions {
     type: ConditionType.time;
+    // duration of time condition in seconds
     duration: number;
 }
 
