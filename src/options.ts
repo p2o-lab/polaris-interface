@@ -3,6 +3,7 @@ import {ConditionType, ServiceCommand} from './enum';
 export interface RecipeOptions {
     version: string;
     name: string;
+    description?: string;
     author: string;
     initial_step: string;
     steps: StepOptions[];
