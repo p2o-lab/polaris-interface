@@ -7,7 +7,7 @@ export enum ServiceCommand {
     resume = 'resume',
     abort = 'abort',
     restart = 'restart',
-    complete = 'complete'
+    complete = 'complete',
 }
 
 export enum ConditionType {
@@ -16,7 +16,7 @@ export enum ConditionType {
     state = 'state',
     variable = 'variable',
     and = 'and',
-    or = 'or'
+    or = 'or',
 }
 
 export enum RecipeState {
@@ -24,12 +24,11 @@ export enum RecipeState {
     running = 'running',
     stopped = 'stopped',
     completed = 'completed',
-    paused = 'paused'
+    paused = 'paused',
 }
 
 export enum Repeat {
     single = 'single',
     all = 'all',
-    none = 'none'
+    none = 'none',
 }
-
