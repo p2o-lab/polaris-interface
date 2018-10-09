@@ -28,6 +28,7 @@ export interface ServiceInterface {
     status: string | number;
     strategies: any[];
     parameters: ParameterInterface[];
+    error: string;
 }
 
 export interface StrategyInterface {

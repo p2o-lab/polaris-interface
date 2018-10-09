@@ -9,7 +9,9 @@
   "homepage": "https://dev.plt.et.tu-dresden.de/modulare-automation/pfe-ree-interface",
   "license": "MIT",
   "scripts": {
-    "prepare": "rm dist/* && tsc"
+    "build": "rm dist/* && tsc",
+    "prepublish": "npm run build",
+    "postversion": "npm run publish"
   },
   "publishConfig": {
     "registry": "https://registry.plt.et.tu-dresden.de:4873"
