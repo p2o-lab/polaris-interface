@@ -1,7 +1,7 @@
 {
   "name": "pfe-ree-interface",
   "description": "interface defintions for pfe-ree-node and pfe-viz",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Markus Graube <markus.graube@tu-dresden.de>",
