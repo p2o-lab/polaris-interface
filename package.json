@@ -11,7 +11,7 @@
   "scripts": {
     "build": "rm dist/* && tsc",
     "prepublish": "npm run build",
-    "postversion": "npm run publish"
+    "postversion": "npm publish"
   },
   "publishConfig": {
     "registry": "https://registry.plt.et.tu-dresden.de:4873"
