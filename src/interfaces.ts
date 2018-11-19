@@ -11,7 +11,7 @@ export interface RecipeInterface {
     id: string;
     status: RecipeState;
     modules: ModuleInterface[];
-    currentStep: StepInterface;
+    currentStep: string;
     options: RecipeOptions;
 }
 
