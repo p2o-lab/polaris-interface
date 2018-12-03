@@ -13,6 +13,7 @@ export interface RecipeInterface {
     modules: ModuleInterface[];
     currentStep: string;
     options: RecipeOptions;
+    protected: boolean;
 }
 
 export interface ModuleInterface {
@@ -20,6 +21,7 @@ export interface ModuleInterface {
     endpoint: string;
     connected: boolean;
     services?: ServiceInterface[];
+    protected: boolean;
 }
 
 export interface ServiceInterface {
