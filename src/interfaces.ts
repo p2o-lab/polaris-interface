@@ -10,7 +10,7 @@ export interface ManagerInterface {
 export interface RecipeInterface {
     id: string;
     status: RecipeState;
-    modules: ModuleInterface[];
+    modules: string[];
     currentStep: string;
     options: RecipeOptions;
     protected: boolean;
@@ -28,7 +28,7 @@ export interface ServiceInterface {
     name: string;
     opMode: string | number;
     status: string | number;
-    strategies: any[];
+    strategies: StrategyInterface[];
     parameters: ParameterInterface[];
     error: string;
 }
