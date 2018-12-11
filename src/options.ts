@@ -41,7 +41,7 @@ export interface ParameterOptions {
     // scope which should be used to replace variables in value
     scope?: ScopeOptions[];
     // should parameter be continuously updated via scope (default: false)
-    continuous: boolean;
+    continuous?: boolean;
 }
 
 export interface ScopeOptions {
