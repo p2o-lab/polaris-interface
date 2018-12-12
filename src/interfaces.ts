@@ -31,6 +31,7 @@ export interface ServiceInterface {
     strategies: StrategyInterface[];
     parameters: ParameterInterface[];
     error: string;
+    lastChange: Date;
 }
 
 export interface StrategyInterface {
@@ -46,6 +47,7 @@ export interface ParameterInterface {
     value?: number;
     min?: number;
     max?: number;
+    unit?: string;
 }
 
 export interface StepInterface {
