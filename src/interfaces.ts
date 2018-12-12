@@ -19,6 +19,7 @@ export interface RecipeInterface {
 export interface ModuleInterface {
     id: string;
     endpoint: string;
+    hmiUrl: string;
     connected: boolean;
     services?: ServiceInterface[];
     protected: boolean;
