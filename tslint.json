@@ -6,6 +6,7 @@
       "single"
     ],
     "object-literal-key-quotes": false,
+    "object-literal-sort-keys": false,
     "ordered-imports": true,
     "import-spacing": true,
     "interface-name": false,
@@ -15,7 +16,8 @@
     ],
     "indent": [
       true,
-      "spaces"
+      "spaces",
+      4
     ],
     "trailing-comma": [
       true
@@ -26,10 +28,7 @@
     "no-unused-variable": true,
     "typedef": [
       true,
-      "arrow-call-signature",
-      "parameter",
       "property-declaration",
-      "variable-declaration",
       "member-variable-declaration",
       "object-destructuring",
       "array-destructuring"
