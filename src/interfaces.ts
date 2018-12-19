@@ -1,5 +1,5 @@
-import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
 import {RecipeState, Repeat, ServiceCommand} from './enum';
+import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
 
 export interface ManagerInterface {
     modules: string[];
