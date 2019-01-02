@@ -19,6 +19,7 @@ export {
     ServiceInterface,
     ParameterInterface,
     RecipeInterface,
+    RecipeRunInterface,
     StrategyInterface,
     PlayerInterface,
     StepInterface,

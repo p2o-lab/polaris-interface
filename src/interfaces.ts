@@ -16,6 +16,13 @@ export interface RecipeInterface {
     protected: boolean;
 }
 
+export interface RecipeRunInterface {
+    id: string;
+    startTime: Date;
+    endTime: Date;
+    recipe: RecipeInterface;
+}
+
 export interface ModuleInterface {
     id: string;
     endpoint: string;
@@ -75,4 +82,5 @@ export interface PlayerInterface {
     currentItem: number;
     repeat: Repeat;
     status: RecipeState;
+    currentRecipeRun: RecipeRunInterface;
 }
