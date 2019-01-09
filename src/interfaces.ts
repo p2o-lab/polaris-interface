@@ -14,6 +14,7 @@ export interface RecipeInterface {
     currentStep: string;
     options: RecipeOptions;
     protected: boolean;
+    lastChange: Date;
 }
 
 export interface RecipeRunInterface {

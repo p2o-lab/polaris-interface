@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm dist/* && tsc",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "postversion": "npm publish"
   },
   "publishConfig": {
