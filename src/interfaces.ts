@@ -41,6 +41,18 @@ export interface ServiceInterface {
     parameters: ParameterInterface[];
     error: string;
     lastChange: Date;
+    controlEnable: ControlEnableInterface;
+}
+
+export interface ControlEnableInterface {
+    start: boolean;
+    pause: boolean;
+    resume: boolean;
+    complete: boolean;
+    unhold: boolean;
+    stop: boolean;
+    abort: boolean;
+    reset: boolean;
 }
 
 export interface StrategyInterface {
