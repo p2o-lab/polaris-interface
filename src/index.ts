@@ -24,7 +24,8 @@ export {
     PlayerInterface,
     StepInterface,
     OperationInterface,
-    TransitionInterface
+    TransitionInterface,
+    ControlEnableInterface
 } from './interfaces';
 
 export {
