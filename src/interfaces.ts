@@ -46,6 +46,7 @@ export interface ServiceInterface {
 
 export interface ControlEnableInterface {
     start: boolean;
+    restart: boolean;
     pause: boolean;
     resume: boolean;
     complete: boolean;
