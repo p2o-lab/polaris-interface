@@ -1,6 +1,6 @@
 {
-  "name": "pfe-ree-interface",
-  "description": "interface defintions for pfe-ree-node and pfe-viz",
+  "name": "@plt/pfe-ree-interface",
+  "description": "interface defintions for @plt/pfe-ree-node and @plt/pfe-viz",
   "version": "1.15.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
