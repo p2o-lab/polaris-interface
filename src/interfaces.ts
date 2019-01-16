@@ -21,7 +21,7 @@ export interface RecipeRunInterface {
     id: string;
     startTime: Date;
     endTime: Date;
-    recipe: RecipeInterface;
+    recipe: RecipeOptions;
 }
 
 export interface ModuleInterface {
@@ -96,5 +96,10 @@ export interface PlayerInterface {
     currentItem: number;
     repeat: Repeat;
     status: RecipeState;
-    currentRecipeRun: RecipeRunInterface;
+    recipeRuns: {
+        id: string;
+        name: string;
+        startTime: Date;
+        endTime: Date;
+    }[];
 }
