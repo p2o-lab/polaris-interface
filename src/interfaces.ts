@@ -22,6 +22,8 @@ export interface RecipeRunInterface {
     startTime: Date;
     endTime: Date;
     recipe: RecipeOptions;
+    serviceLog: any[];
+    variableLog: any[];
 }
 
 export interface ModuleInterface {
