@@ -41,6 +41,7 @@ export interface ServiceInterface {
     status: string | number;
     strategies: StrategyInterface[];
     parameters: ParameterInterface[];
+    currentStrategy: string;
     error: string;
     lastChange: Date;
     controlEnable: ControlEnableInterface;
