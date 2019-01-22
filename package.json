@@ -13,9 +13,6 @@
     "prepare": "npm run build",
     "postversion": "npm publish"
   },
-  "publishConfig": {
-    "registry": "https://registry.plt.et.tu-dresden.de:4873"
-  },
   "devDependencies": {
     "tslint": "^5.11.0",
     "typescript": "^3.0.1"
