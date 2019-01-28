@@ -1,4 +1,13 @@
-import {ConditionType, ServiceCommand} from './enum';
+import {ConditionType, RecipeState, ServiceCommand} from './enum';
+
+export interface PlantOptions {
+    /** id of the plant */
+    id: string;
+    /** name of the plant */
+    name: string;
+    /** site of the plant */
+    site?: string;
+}
 
 export interface RecipeOptions {
     /** version of recipe */
@@ -7,36 +16,10 @@ export interface RecipeOptions {
     name: string;
     /** optional description of recipe */
     description?: string;
+    /** optional state of recipe */
+    state: RecipeState;
     /** author of recipe */
-    author: string;
-    /** name of initial step of recipe */
-    initial_step: string;
-    /** list of recipe steps */
-    steps: StepOptions[];
-}
-
-export interface StepOptions {
-    /** unique name of step */
-    name: string;
-    /** optional description of step */
-    description?: string;
-    /** array of operations performed when entering step */
-    operations: OperationOptions[];
-    /** array of transition to be checked during step */
-    transitions: TransitionOptions[];
-}
-
-export interface OperationOptions {
-    /** module id (can be omitted if only one module is registered) */
-    module?: string;
-    /** service name */
-    service: string;
-    /** strategy name (default strategy is used if omitted) */
-    strategy?: string;
-    /** command name */
-    command: ServiceCommand;
-    /** optional parameters for start or restart */
-    parameter?: ParameterOptions[];
+    author: [string];
 }
 
 export interface ParameterOptions {
@@ -62,11 +45,6 @@ export interface ScopeOptions {
     strategy?: string;
     dataAssembly: string;
     variable: string;
-}
-
-export interface TransitionOptions {
-    next_step: string;
-    condition: ConditionOptions;
 }
 
 export type ConditionOptions = AndConditionOptions | TimeConditionOptions | OrConditionOptions |
