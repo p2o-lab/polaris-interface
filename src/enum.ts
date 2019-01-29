@@ -17,6 +17,7 @@ export enum ConditionType {
     variable = 'variable',
     and = 'and',
     or = 'or',
+    expression = 'expression'
 }
 
 export enum RecipeState {
