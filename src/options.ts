@@ -13,6 +13,13 @@ export interface RecipeOptions {
     initial_step: string;
     /** list of recipe steps */
     steps: StepOptions[];
+    /** requirements for starting the recipe */
+    requirements?: {
+        /** id of modules to be loaded and connected to */
+        modules: string[];
+        /** state of autoreset */
+        autoreset: boolean;
+    };
 }
 
 export interface StepOptions {
