@@ -14,9 +14,8 @@ export interface RecipeInterface {
     plant: PlantOptions;
     /** involved modules of recipe */
     modules: ModuleInterface[];
-    /** currently running step */
-    // TODO wird das vom Programm her gebraucht?
-    // currentStep: string;
+    /** id of the currently running mode */
+    currentMode: string;
     /** general option of recipe */
     options: RecipeOptions;
     /** recipe protection */
@@ -36,6 +35,8 @@ export interface ModeInterface {
     name: string;
     /** list of procedures and transitions in the mode */
     procedures: Array<ProcedureInterface | TransitionInterface>;
+    /** list of the currently running procedures */
+    currentProcedures: string[];
     /** id(s) of inital procedure(s) in the mode */
     initial_procedure: string[];
 }
@@ -49,6 +50,8 @@ export interface ProcedureInterface {
     module: ModuleInterface;
     /** steps of the procedure */
     steps: Array<StepInterface | TransitionInterface>;
+    /** id of the currently running step */
+    currentStep: string;
     /** id of initial step of this procedure */
     initial_step: string;
 }
