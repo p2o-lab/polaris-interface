@@ -70,7 +70,8 @@ export interface TransitionOptions {
 }
 
 export type ConditionOptions = AndConditionOptions | TimeConditionOptions | OrConditionOptions |
-    TimeConditionOptions | StateConditionOptions | VariableConditionOptions | NotConditionOptions;
+    TimeConditionOptions | StateConditionOptions | VariableConditionOptions | NotConditionOptions |
+    ExpressionConditionOptions;
 
 export interface BaseConditionOptions {
     type: ConditionType;
@@ -113,4 +114,10 @@ export interface VariableConditionOptions extends BaseConditionOptions {
     variable: string;
     value: string | number;
     operator: '==' | '<=' | '>=' | '>' | '<';
+}
+
+export interface ExpressionConditionOptions extends BaseConditionOptions {
+    type: ConditionType.expression;
+    expression: string;
+    scope?: ScopeOptions[];
 }
