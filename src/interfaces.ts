@@ -1,5 +1,5 @@
 import {RecipeState, Repeat, ServiceCommand} from './enum';
-import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
+import {ConditionOptions, ParameterOptions, PlantOptions, RecipeOptions} from './options';
 
 export interface ManagerInterface {
     modules: string[];
@@ -8,26 +8,78 @@ export interface ManagerInterface {
 }
 
 export interface RecipeInterface {
+    /** id of the recipe */
     id: string;
-    status: RecipeState;
-    modules: string[];
-    currentStep: string;
+    /** plant for this recipe */
+    plant: PlantOptions;
+    /** involved modules of recipe */
+    modules: ModuleInterface[];
+    /** id of the currently running mode */
+    currentMode: string;
+    /** general option of recipe */
     options: RecipeOptions;
+    /** recipe protection */
     protected: boolean;
+    /** date of last change */
     lastChange: Date;
+    /** list of modes and transitions in the recipe */
+    modes: Array<ModeInterface | TransitionInterface>;
+    /** name of initial mode of recipe */
+    initial_mode: string;
 }
 
-export interface RecipeRunInterface {
+export interface ModeInterface {
+    /** id of the mode */
     id: string;
-    startTime: Date;
-    endTime: Date;
-    recipe: RecipeOptions;
-    serviceLog: any[];
-    variableLog: any[];
+    /** name of the mode */
+    name: string;
+    /** list of procedures and transitions in the mode */
+    procedures: Array<ProcedureInterface | TransitionInterface>;
+    /** list of the currently running procedures */
+    currentProcedures: string[];
+    /** id(s) of inital procedure(s) in the mode */
+    initial_procedure: string[];
+}
+
+export interface ProcedureInterface {
+    /** id of the procedure */
+    id: string;
+    /** name of the procedure */
+    name: string;
+    /** module of this procedure */
+    module: ModuleInterface;
+    /** steps of the procedure */
+    steps: Array<StepInterface | TransitionInterface>;
+    /** id of the currently running step */
+    currentStep: string;
+    /** id of initial step of this procedure */
+    initial_step: string;
+}
+export interface StepInterface {
+    /** id of the step */
+    id: string;
+    /** name of the step */
+    name: string;
+    /** service of this step */
+    service: ServiceInterface;
+    /** service command of this step */
+    command: ServiceCommand;
+    /** optional parameters for this step */
+    parameter?: ParameterOptions[];
+}
+
+export interface TransitionInterface {
+    /** id of the transtition */
+    id: string;
+    /** next step(s) of the transtion */
+    next_step: ModeInterface | ProcedureInterface[] | StepInterface | TransitionInterface;
+    /** condition to fulfill */
+    condition: ConditionOptions;
 }
 
 export interface ModuleInterface {
     id: string;
+    name: string;
     endpoint: string;
     hmiUrl: string;
     connected: boolean;
@@ -75,23 +127,13 @@ export interface ParameterInterface {
     unit?: string;
 }
 
-export interface StepInterface {
-    name: string;
-    transitions: TransitionInterface[];
-    operations: OperationInterface[];
-}
-
-export interface TransitionInterface {
-    next_step: string;
-    condition: ConditionOptions;
-}
-
-export interface OperationInterface {
-    module: string;
-    service: string;
-    strategy?: string;
-    command: ServiceCommand;
-    parameter?: ParameterOptions[];
+export interface RecipeRunInterface {
+    id: string;
+    startTime: Date;
+    endTime: Date;
+    recipe: RecipeOptions;
+    serviceLog?: any[];
+    variableLog?: any[];
 }
 
 export interface PlayerInterface {
@@ -99,10 +141,5 @@ export interface PlayerInterface {
     currentItem: number;
     repeat: Repeat;
     status: RecipeState;
-    recipeRuns: {
-        id: string;
-        name: string;
-        startTime: Date;
-        endTime: Date;
-    }[];
+    recipeRuns: RecipeOptions[];
 }

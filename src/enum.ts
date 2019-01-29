@@ -20,11 +20,8 @@ export enum ConditionType {
 }
 
 export enum RecipeState {
-    idle = 'idle',
-    running = 'running',
-    stopped = 'stopped',
-    completed = 'completed',
-    paused = 'paused',
+    approved = 'approved',
+    draft = 'draft'
 }
 
 export enum Repeat {
