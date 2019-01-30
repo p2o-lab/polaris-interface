@@ -73,6 +73,7 @@ export interface ParameterInterface {
     min?: number;
     max?: number;
     unit?: string;
+    readonly?: boolean;
 }
 
 export interface StepInterface {
