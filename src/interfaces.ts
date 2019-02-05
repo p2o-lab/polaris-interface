@@ -14,7 +14,8 @@ export interface RecipeInterface {
     currentStep: string;
     options: RecipeOptions;
     protected: boolean;
-    lastChange: Date;
+    /** duration in seconds */
+    lastChange: number;
 }
 
 export interface RecipeRunInterface {
@@ -42,8 +43,8 @@ export interface ServiceInterface {
     strategies: StrategyInterface[];
     parameters: ParameterInterface[];
     currentStrategy: string;
-    error: string;
-    lastChange: Date;
+    /** duration in seconds */
+    lastChange: number;
     controlEnable: ControlEnableInterface;
 }
 
@@ -74,6 +75,7 @@ export interface ParameterInterface {
     max?: number;
     unit?: string;
     readonly?: boolean;
+    type?: string;
 }
 
 export interface StepInterface {
