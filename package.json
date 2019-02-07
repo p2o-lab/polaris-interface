@@ -1,7 +1,7 @@
 {
   "name": "@plt/pfe-ree-interface",
   "description": "interface definitions for @plt/pfe-ree-node and @plt/pfe-ree-viz",
-  "version": "1.21.0",
+  "version": "1.21.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Markus Graube <markus.graube@tu-dresden.de>",
