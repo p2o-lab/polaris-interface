@@ -1,5 +1,12 @@
 import {ConditionType, ServiceCommand} from './enum';
 
+/**
+ * Options for loading recipes and modules
+ */
+
+/**
+ * Options to load/parse a recipe
+ */
 export interface RecipeOptions {
     /** version of recipe */
     version: string;

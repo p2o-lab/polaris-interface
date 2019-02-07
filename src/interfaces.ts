@@ -1,6 +1,8 @@
 import {RecipeState, Repeat, ServiceCommand} from './enum';
 import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
 
+/** Exporting interfaces which can retrieved from backend */
+
 export interface ManagerInterface {
     modules: string[];
     activeRecipe?: RecipeInterface;
@@ -36,16 +38,23 @@ export interface ModuleInterface {
     protected: boolean;
 }
 
-export interface ServiceInterface {
+export interface BaseServiceInterface {
     name: string;
-    opMode: string | number;
-    status: string | number;
-    strategies: StrategyInterface[];
+    status: string;
     parameters: ParameterInterface[];
-    currentStrategy: string;
     /** duration in seconds */
     lastChange: number;
     controlEnable: ControlEnableInterface;
+}
+
+export interface ServiceInterface extends BaseServiceInterface {
+    opMode: string | number;
+    strategies: StrategyInterface[];
+    currentStrategy: string;
+}
+
+export interface FunctionBlockInterface extends BaseServiceInterface {
+    type: string;
 }
 
 export interface ControlEnableInterface {
@@ -70,7 +79,7 @@ export interface StrategyInterface {
 
 export interface ParameterInterface {
     name: string;
-    value?: number;
+    value?: number | string | boolean;
     min?: number;
     max?: number;
     unit?: string;

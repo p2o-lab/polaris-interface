@@ -18,6 +18,8 @@ export {
     ManagerInterface,
     ModuleInterface,
     ServiceInterface,
+    BaseServiceInterface,
+    FunctionBlockInterface,
     ParameterInterface,
     RecipeInterface,
     RecipeRunInterface,
