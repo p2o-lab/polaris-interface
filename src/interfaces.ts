@@ -37,7 +37,7 @@ export interface ModeInterface {
     procedures: Array<ProcedureInterface | TransitionInterface>;
     /** list of the currently running procedures */
     currentProcedures: string[];
-    /** id(s) of inital procedure(s) in the mode */
+    /** id(s) of initial procedure(s) in the mode */
     initial_procedure: string[];
 }
 
@@ -69,9 +69,9 @@ export interface StepInterface {
 }
 
 export interface TransitionInterface {
-    /** id of the transtition */
+    /** id of the transition */
     id: string;
-    /** next step(s) of the transtion */
+    /** next step(s) of the transition */
     next_step: ModeInterface | ProcedureInterface[] | StepInterface | TransitionInterface;
     /** condition to fulfill */
     condition: ConditionOptions;
