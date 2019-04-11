@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.15.0.2-->
+  <key for="port" id="d0" yfiles.type="portgraphics"/>
+  <key for="port" id="d1" yfiles.type="portgeometry"/>
+  <key for="port" id="d2" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d3"/>
+  <key attr.name="description" attr.type="string" for="node" id="d4"/>
+  <key for="node" id="d5" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d6" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d7"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d8"/>
+  <key for="edge" id="d9" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <node id="n0">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="119.03644444444444" width="222.0708108108108" x="130.47808665808668" y="29.297777777777753"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="113.41455078125" x="54.3281300147804" y="3.0">PlayerInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>playlist: RecipeInterface[]
+currentItem: number
+repeat: Repeat
+status: RecipeState
+recipeRuns: RecipeOperations[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="88.11733333333336" width="201.1731081081081" x="382.54916023166027" y="44.75733333333329"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="130.6611328125" x="35.25598764780405" y="3.0">ManagerInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>modules []: string[]
+activeRecipe?: RecipeInterface
+autoReset: boolean</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="156.0" width="304.88864864864865" x="254.46916773916774" y="187.63199999999995"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="117.0009765625" x="93.94383604307433" y="3.0">RecipeInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+plant: PlantOptions
+modules: ModuleOptions[]
+currentMode: ModeInterface
+options: RecipeOptions
+protected: boolean
+lastChange: Date</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="130.46172854044437" width="326.96" x="564.2128571428572" y="384.919357952"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="95.5205078125" x="115.71974609374999" y="3.0">PlantOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+name: string
+site?: string
+modes: Array&lt;ModeOptions | ModeTransitionOptions&gt;
+initalMode: ModeOptions</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="119.03644444444444" width="135.34054054054053" x="71.89401544401545" y="390.63199999999995"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="107.52392578125" x="13.908307379645265" y="3.0">RecipeOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>version: string
+name: string
+description?: string
+state: RecipeState
+author: [string]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="75.14666666666676" width="263.42905405405406" x="313.3100761475761" y="552.8664198257777"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="106.9462890625" x="78.24138249577703" y="3.0">ModeInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>mode: ModeOptions
+currentProdcedures: ProcedureInterface[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="88.11733333333336" width="198.6997297297297" x="731.3489446589447" y="546.3810864924444"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="169.419921875" x="14.639903927364855" y="3.0">ModeTransitionOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+nextMode: ModeOptions
+condition: ConditionOptions</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n7">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="88.11733333333336" width="193.52864864864864" x="282.403135993136" y="786.372978169836"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="141.22998046875" x="26.14933408994932" y="3.0">ProcedureInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>procedure: ProcedureOptions
+currentSteps: StepInterface[]
+module: ModuleInterface</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="71.21121617777817" width="145.50743243243244" x="326.4891409266409" y="1066.2519226142804"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="101.12548828125" x="22.19097207559122" y="3.0">StepInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>step: StepOptions
+service: ServiceInterface
+</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="177.63199999999995" width="288.1334082134083" x="-371.8984862134864" y="1527.4235713567448"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="169.54052734375" x="59.29644043482915" y="3.0">ControlEnableInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>start: boolean
+restart: boolean
+pause: boolean
+resume: boolean
+complete: boolean
+unhold: boolean
+stop: boolean
+abort: boolean
+reset: boolean</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n10">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="132.8746666666666" width="171.4572972972973" x="20.000319605319604" y="199.19466666666665"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="144.6640625" x="13.396617398648644" y="3.0">RecipeRunInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+startTime: Date
+endTime: Date
+recipe: RecipeOptions
+serviceLog?: any[]
+variableLog?: any[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n11">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="92.0" width="125.0" x="738.1361111111111" y="1210.1394868845025"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="127.67138671875" x="-1.335693359375" y="3.0">ConditionOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="abstract" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n12">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="116.8746666666666" width="214.09513513513514" x="-6.7542857142857144" y="1770.5459955991691"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="133.85400390625" x="40.12056561444257" y="3.0">ParameterOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>name: string
+variable?: string
+value: string | number | boolean
+scope?: ScopeOptions[]
+continous?: boolean</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n13">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="132.8746666666666" width="181.48972972972973" x="237.34084942084942" y="1854.2069733769467"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="102.36962890625" x="39.560050411739866" y="3.0">ScopeOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>name: string
+module?: string
+service?: sring
+strategy?: string
+dataAssembly: string
+variable: string</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n14">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="100.8746666666666" width="405.212972972973" x="443.3462912912913" y="654.4983115031694"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="97.46923828125" x="153.8718673458615" y="3.0">ModeOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+name: string
+procedures: Array&lt;ProcedureOptions | ProcedureTransitionOptions&gt;
+initalProcedures: ProcedureOptions[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n15">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="116.8746666666666" width="308.9016216216216" x="414.7432368082368" y="905.4903115031693"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="131.7529296875" x="88.5743459670608" y="3.0">ProcedureOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+name: string
+module: ModuleOptions
+steps: Array&lt;StepOptions | StepTransitionOptions&gt;
+initialSteps: StepOptions[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n16">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="116.8746666666666" width="244.69405405405405" x="425.44940154440155" y="1197.7021535511692"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="91.6484375" x="76.52280827702702" y="3.0">StepOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+name: string
+service: string
+command: ServiceCommand
+parameter?: ParameterOptions[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n17">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="88.11733333333336" width="256.9497297297297" x="607.9239446589447" y="786.372978169836"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="203.70361328125" x="26.623058224239855" y="3.0">ProcedureTransitionOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+nextProcedures: ProcedureOptions[]
+condition: ConditionOptions</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n18">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="92.0" width="207.6997297297297" x="577.4362462462464" y="1053.364978169836"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="163.59912109375" x="22.050304317989855" y="3.0">StepTransitionOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+nextSteps: StepOptions[]
+condition: ConditionOptions</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n19">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="121.0872888888889" width="182.49297297297298" x="-82.45077941577948" y="1034.3213337253915"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="110.7548828125" x="35.86904508023649" y="3.0">ModuleOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+name: string
+hmiUrl: string
+services?: ServiceOptions[]
+protected: boolean</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n20">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="121.08728888888879" width="251.4245945945946" x="-33.10839202839209" y="1387.3376238819974"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="112.24658203125" x="69.5890062816723" y="3.0">ServiceOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+name: string
+strategies: StrategyOptions[]
+parameters: ParameterOptions[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n21">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="116.8746666666666" width="211.58702702702703" x="76.49868725868726" y="1557.8022380234115"/>
+          <y:Fill color="#336699" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="120.619140625" x="45.48394320101352" y="3.0">StrategyOptions</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>id: string
+name: string
+default: boolean
+sc: boolean
+parameters: ParameterOptions[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n22">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="116.8746666666666" width="182.492972972973" x="336.7428571428571" y="1557.8022380234115"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="143.3310546875" x="19.580959142736504" y="3.0">ParameterInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>name: string
+value?: number
+min?: number
+max?: number
+unit?: string</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n23">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="130.46172854044437" width="251.4245945945946" x="144.02460746460747" y="1190.9086226142804"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="121.7236328125" x="64.8504808910473" y="3.0">ServiceInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>service: ServiceOptions
+opMode: string | number
+status: string | number
+currentStrategy: StrategyInterface
+error: string
+lastChange: Date
+controlEnable: ControlEnableInterface</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n24">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="71.21121617777806" width="145.50743243243244" x="238.23517267267266" y="930.8145892809471"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="120.23193359375" x="12.637749419341219" y="3.0">ModuleInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>module: ModuleOptions
+connected: boolean</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n25">
+      <data key="d5">
+        <y:UMLClassNode>
+          <y:Geometry height="116.8746666666666" width="211.58702702702703" x="240.5525868725868" y="1370.4766622658358"/>
+          <y:Fill color="#607D8B" transparent="false"/>
+          <y:BorderStyle color="#FFFFFF" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="t" textColor="#FFFFFF" visible="true" width="130.09619140625" x="40.74541781038852" y="3.0">StrategyInterface</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="false">
+            <y:AttributeLabel>strategy: StrategyOptions
+parameters: ParameterInterface[]</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <edge id="e0" source="n0" target="n2">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="59.51822222222222" tx="-76.22216216216216" ty="-78.0">
+            <y:Point x="241.5134920634921" y="163.8342222222222"/>
+            <y:Point x="330.69132990132994" y="163.8342222222222"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n1" target="n2">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="44.05866666666668" tx="76.22216216216216" ty="-78.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n2" target="n3">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="114.33324324324325" sy="78.0" tx="0.0" ty="-65.23086427022218">
+            <y:Point x="521.2467353067353" y="359.13199999999995"/>
+            <y:Point x="727.6928571428572" y="359.13199999999995"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n2" target="n4">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-114.3332432432432" sy="78.0" tx="33.83513513513513" ty="-59.51822222222222">
+            <y:Point x="292.58024882024887" y="359.13199999999995"/>
+            <y:Point x="173.39942084942084" y="359.13199999999995"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n2" target="n5">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="38.11108108108107" sy="78.0" tx="0.0" ty="-37.57333333333338"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n5" target="n7">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-65.85726351351354" sy="37.57333333333338" tx="0.0" ty="-44.05866666666668"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n7" target="n8">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="44.05866666666668" tx="0.0" ty="-35.605608088888964">
+            <y:Point x="379.1674603174603" y="889.9903115031693"/>
+            <y:Point x="399.24285714285713" y="889.9903115031693"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n6" target="n11">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="49.674932432432456" sy="44.05866666666668" tx="41.66666666666663" ty="-46.0">
+            <y:Point x="880.3738095238095" y="1114.864978169836"/>
+            <y:Point x="842.3027777777777" y="1114.864978169836"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n12" target="n13">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="-35.882666666666864" tx="0.0" ty="-66.4373333333333">
+            <y:Point x="328.0857142857143" y="1793.1006622658356"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e9" source="n10" target="n4">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="66.4373333333333" tx="-33.83513513513513" ty="-59.51822222222222"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e10" source="n3" target="n14">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-81.74000000000001" sy="65.23086427022224" tx="0.0" ty="-50.4373333333333"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e11" source="n14" target="n15">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-101.30324324324329" sy="50.4373333333333" tx="0.0" ty="-58.4373333333333">
+            <y:Point x="544.6495345345345" y="770.872978169836"/>
+            <y:Point x="569.1940476190476" y="770.872978169836"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e12" source="n15" target="n16">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-77.22540540540535" sy="58.4373333333333" tx="0.0" ty="-58.4373333333333">
+            <y:Point x="491.9686422136423" y="1037.864978169836"/>
+            <y:Point x="547.7964285714286" y="1037.864978169836"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e13" source="n16" target="n12">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="61.17351351351351" sy="58.4373333333333" tx="71.36504504504501" ty="-58.4373333333333">
+            <y:Point x="608.9699420849421" y="1738.7883332615065"/>
+            <y:Point x="171.65832689832686" y="1738.7883332615065"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e14" source="n3" target="n6">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="81.74" sy="65.23086427022218" tx="0.0" ty="-44.05866666666668">
+            <y:Point x="809.4328571428572" y="530.8810864924444"/>
+            <y:Point x="830.6988095238096" y="530.8810864924444"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e15" source="n6" target="n14">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-49.67493243243243" sy="44.05866666666668" tx="135.07099099099102" ty="-50.4373333333333"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e16" source="n14" target="n17">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="101.30324324324324" sy="50.4373333333333" tx="0.0" ty="-44.05866666666668">
+            <y:Point x="747.2560210210211" y="770.872978169836"/>
+            <y:Point x="736.3988095238096" y="770.872978169836"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e17" source="n17" target="n15">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-64.23743243243243" sy="44.05866666666668" tx="102.96720720720717" ty="-58.4373333333333"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e18" source="n15" target="n18">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="77.2254054054054" sy="58.4373333333333" tx="0.0" ty="-46.0">
+            <y:Point x="646.419453024453" y="1037.864978169836"/>
+            <y:Point x="681.2861111111113" y="1037.864978169836"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e19" source="n18" target="n16">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-51.92493243243243" sy="46.0" tx="81.56468468468469" ty="-58.4373333333333"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e20" source="n18" target="n11">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="51.92493243243243" sy="46.0" tx="-41.66666666666667" ty="-46.0">
+            <y:Point x="733.2110435435437" y="1160.864978169836"/>
+            <y:Point x="758.9694444444444" y="1160.864978169836"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e21" source="n17" target="n11">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="64.23743243243246" sy="44.05866666666668" tx="0.0" ty="-46.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e22" source="n2" target="n19">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-38.11108108108107" sy="78.0" tx="-45.62324324324325" ty="-60.54364444444445">
+            <y:Point x="368.802410982411" y="375.13199999999995"/>
+            <y:Point x="222.73492063492063" y="375.13199999999995"/>
+            <y:Point x="222.73492063492063" y="979.4276448365026"/>
+            <y:Point x="-36.82753617253624" y="979.4276448365026"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e23" source="n19" target="n20">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="60.54364444444445" tx="-83.8081981981982" ty="-60.54364444444445"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e24" source="n20" target="n21">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="56.791538746538805" sy="56.02321616161612" tx="-52.89675675675676" ty="-58.4373333333333">
+            <y:Point x="149.395444015444" y="1516.62790671028"/>
+            <y:Point x="129.395444015444" y="1516.62790671028"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e25" source="n20" target="n12">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-62.85614864864863" sy="60.54364444444445" tx="-71.36504504504501" ty="-58.4373333333333">
+            <y:Point x="29.74775662025658" y="1650.725995599169"/>
+            <y:Point x="28.928236808236846" y="1650.725995599169"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e26" source="n7" target="n24">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-64.50954954954955" sy="44.05866666666668" tx="0.0" ty="-35.60560808888903">
+            <y:Point x="314.6579107679108" y="889.9903115031693"/>
+            <y:Point x="310.9888888888889" y="889.9903115031693"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e27" source="n8" target="n23">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-36.37685810810811" sy="35.605608088889085" tx="0.0" ty="-65.23086427022218">
+            <y:Point x="362.86599903474905" y="1175.4086226142804"/>
+            <y:Point x="269.7369047619048" y="1175.4086226142804"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e28" source="n5" target="n14">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="65.85726351351352" sy="37.57333333333338" tx="-135.070990990991" ty="-50.4373333333333"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e29" source="n7" target="n15">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="64.50954954954955" sy="44.05866666666668" tx="-102.9672072072072" ty="-58.4373333333333">
+            <y:Point x="443.6770098670099" y="889.9903115031693"/>
+            <y:Point x="466.22684041184044" y="889.9903115031693"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e30" source="n8" target="n16">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="36.37685810810811" sy="35.605608088889085" tx="-81.56468468468469" ty="-58.4373333333333">
+            <y:Point x="435.6197152509652" y="1147.9780337253917"/>
+            <y:Point x="466.23174388674386" y="1147.9780337253917"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e31" source="n24" target="n19">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="35.60560808888903" tx="45.62324324324324" ty="-60.54364444444445">
+            <y:Point x="310.9888888888889" y="1012.5407003920584"/>
+            <y:Point x="54.41895031395025" y="1012.5407003920584"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e32" source="n21" target="n12">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="58.4373333333333" tx="0.0" ty="-58.4373333333333">
+            <y:Point x="182.29220077220077" y="1708.385995599169"/>
+            <y:Point x="100.29328185328185" y="1708.385995599169"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e33" source="n23" target="n25">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="62.85614864864865" sy="65.23086427022218" tx="0.0" ty="-58.4373333333333">
+            <y:Point x="332.5930534105534" y="1352.8703511547246"/>
+            <y:Point x="346.3461003861003" y="1352.8703511547246"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e34" source="n23" target="n20">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-125.73929888751061" sy="0.0" tx="0.0" ty="-60.543644444444396">
+            <y:Point x="92.60390526890521" y="1256.1394868845025"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e35" source="n25" target="n21">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="-52.89675675675676" sy="58.4373333333333" tx="52.89675675675676" ty="-58.4373333333333">
+            <y:Point x="293.44934362934356" y="1502.8513289325024"/>
+            <y:Point x="235.18895752895753" y="1502.8513289325024"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e36" source="n25" target="n22">
+      <data key="d9">
+        <y:PolyLineEdge>
+          <y:Path sx="52.89675675675676" sy="58.4373333333333" tx="0.0" ty="-58.4373333333333">
+            <y:Point x="399.2428571428571" y="1522.576783477957"/>
+            <y:Point x="427.9893436293436" y="1522.576783477957"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="standard"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d6">
+    <y:Resources/>
+  </data>
+</graphml>
