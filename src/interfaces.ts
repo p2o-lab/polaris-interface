@@ -1,5 +1,5 @@
 import {RecipeState, Repeat, ServiceCommand} from './enum';
-import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
+import {ConditionOptions, ParameterOptions, RecipeOptions} from './RecipeOptions';
 
 /** Exporting interfaces which can retrieved from backend */
 
@@ -111,10 +111,10 @@ export interface PlayerInterface {
     currentItem: number;
     repeat: Repeat;
     status: RecipeState;
-    recipeRuns: {
+    recipeRuns: Array<{
         id: string;
         name: string;
         startTime: Date;
         endTime: Date;
-    }[];
+    }>;
 }

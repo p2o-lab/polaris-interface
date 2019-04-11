@@ -12,7 +12,8 @@ export {RecipeOptions,
     TransitionOptions,
     OperationOptions,
     ParameterOptions,
-    ScopeOptions} from './options';
+    ScopeOptions
+} from './RecipeOptions';
 
 export {
     ManagerInterface,
@@ -28,12 +29,12 @@ export {
     StepInterface,
     OperationInterface,
     TransitionInterface,
-    ControlEnableInterface
+    ControlEnableInterface,
 } from './interfaces';
 
 export {
     ServiceCommand,
     ConditionType,
     RecipeState,
-    Repeat
+    Repeat,
 } from './enum';
