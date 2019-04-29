@@ -1,7 +1,7 @@
 {
   "name": "@plt/pfe-ree-interface",
   "description": "interface definitions for @plt/pfe-ree-node and @plt/pfe-ree-viz",
-  "version": "1.21.1",
+  "version": "1.22.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Markus Graube <markus.graube@tu-dresden.de>",
@@ -14,7 +14,7 @@
     "postversion": "npm publish"
   },
   "devDependencies": {
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1"
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
   }
 }

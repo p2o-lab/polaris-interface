@@ -12,7 +12,7 @@ export {RecipeOptions,
     TransitionOptions,
     OperationOptions,
     ParameterOptions,
-    ScopeOptions
+    ScopeOptions,
 } from './RecipeOptions';
 
 export {
@@ -20,10 +20,11 @@ export {
     ModuleInterface,
     ServiceInterface,
     BaseServiceInterface,
-    FunctionBlockInterface,
+    VirtualServiceInterface,
     ParameterInterface,
     RecipeInterface,
     RecipeRunInterface,
+    RecipeRunOverviewInterface,
     StrategyInterface,
     PlayerInterface,
     StepInterface,

@@ -53,8 +53,9 @@ export interface ServiceInterface extends BaseServiceInterface {
     currentStrategy: string;
 }
 
-export interface FunctionBlockInterface extends BaseServiceInterface {
+export interface VirtualServiceInterface extends BaseServiceInterface {
     type: string;
+    sc: boolean;
 }
 
 export interface ControlEnableInterface {
@@ -111,10 +112,12 @@ export interface PlayerInterface {
     currentItem: number;
     repeat: Repeat;
     status: RecipeState;
-    recipeRuns: Array<{
-        id: string;
-        name: string;
-        startTime: Date;
-        endTime: Date;
-    }>;
+    recipeRuns: RecipeRunOverviewInterface[];
+}
+
+export interface RecipeRunOverviewInterface {
+    id: string;
+    name: string;
+    startTime: Date;
+    endTime: Date;
 }
