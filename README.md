@@ -1,10 +1,10 @@
-pfe-ree-interface
+polaris-interface
 ----------------
 
-Interfaces for *pfe-ree-node* and *pfe-viz*
+Interfaces for *polaris-frontend* and *polaris-backend*
 
 
 ```
 npm version [major|minor|patch]
 ```
-automatically builds and deploys application to npm registry (https://registry.plt.et.tu-dresden.de:4873) 
+automatically builds and deploys application to npm registry

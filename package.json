@@ -1,12 +1,12 @@
 {
-  "name": "@plt/pfe-ree-interface",
-  "description": "interface definitions for @plt/pfe-ree-node and @plt/pfe-ree-viz",
+  "name": "@p2olab/polaris-interface",
+  "description": "interface definitions for polaris-frontend and polaris-backend",
   "version": "1.22.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Markus Graube <markus.graube@tu-dresden.de>",
-  "repository": "svn@dev.plt.et.tu-dresden.de:modulare-automation/pfe-ree-interface.git",
-  "homepage": "https://dev.plt.et.tu-dresden.de/modulare-automation/pfe-ree-interface",
+  "repository": "git@github.com:p2o-lab/polaris-interface.git",
+  "homepage": "https://github.com/p2o-lab/polaris-interface",
   "license": "MIT",
   "scripts": {
     "build": "rm dist/* && tsc",
