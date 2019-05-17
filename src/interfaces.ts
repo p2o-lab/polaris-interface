@@ -47,8 +47,13 @@ export interface BaseServiceInterface {
     controlEnable: ControlEnableInterface;
 }
 
+export interface OpModeInterface {
+    state: 'on' | 'manual' | 'automatic';
+    source: 'external' | 'internal';
+}
+
 export interface ServiceInterface extends BaseServiceInterface {
-    opMode: string | number;
+    opMode: OpModeInterface;
     strategies: StrategyInterface[];
     currentStrategy: string;
 }

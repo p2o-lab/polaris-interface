@@ -31,6 +31,7 @@ export {
     OperationInterface,
     TransitionInterface,
     ControlEnableInterface,
+    OpModeInterface
 } from './interfaces';
 
 export {
