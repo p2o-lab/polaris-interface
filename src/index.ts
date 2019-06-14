@@ -15,8 +15,9 @@ export {RecipeOptions,
     ScopeOptions,
 } from './RecipeOptions';
 
+export {OpcUaNodeOptions} from './ModuleOptions';
+
 export {
-    ManagerInterface,
     ModuleInterface,
     ServiceInterface,
     BaseServiceInterface,
@@ -31,7 +32,7 @@ export {
     OperationInterface,
     TransitionInterface,
     ControlEnableInterface,
-    OpModeInterface
+    OpModeInterface,
 } from './interfaces';
 
 export {

@@ -3,17 +3,14 @@ import {ConditionOptions, ParameterOptions, RecipeOptions} from './RecipeOptions
 
 /** Exporting interfaces which can retrieved from backend */
 
-export interface ManagerInterface {
-    modules: string[];
-    activeRecipe?: RecipeInterface;
-    autoReset: boolean;
-}
-
+/**
+ * Details of a recipe with static and dynamic information
+ */
 export interface RecipeInterface {
     id: string;
     status: RecipeState;
     modules: string[];
-    currentStep: string;
+    currentStep: StepInterface;
     options: RecipeOptions;
     protected: boolean;
     /** duration in seconds */
@@ -25,6 +22,7 @@ export interface RecipeRunInterface {
     startTime: Date;
     endTime: Date;
     recipe: RecipeOptions;
+    status: RecipeState;
     serviceLog: any[];
     variableLog: any[];
 }
@@ -110,10 +108,16 @@ export interface OperationInterface {
     strategy?: string;
     command: ServiceCommand;
     parameter?: ParameterOptions[];
+    state?: 'executing' | 'completed' | 'aborted';
 }
 
 export interface PlayerInterface {
-    playlist: RecipeInterface[];
+    playlist: Array<{
+        id: string;
+        name: string;
+        options: RecipeOptions
+    }>;
+    currentRecipe: RecipeInterface;
     currentItem: number;
     repeat: Repeat;
     status: RecipeState;
@@ -125,4 +129,5 @@ export interface RecipeRunOverviewInterface {
     name: string;
     startTime: Date;
     endTime: Date;
+    status: RecipeState;
 }

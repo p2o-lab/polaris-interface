@@ -55,4 +55,8 @@ export interface OpcUaNodeOptions {
     node_id: string;
     // data type of OPC UA node
     data_type: string;
+    // recent value
+    value?: number | string | boolean;
+    // timestamp of last update of value
+    timestamp?: Date;
 }
