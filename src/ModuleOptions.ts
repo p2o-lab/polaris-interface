@@ -1,26 +1,36 @@
 export interface ModuleOptions {
     id: string;
-    opcuaServerUrl: string;
-    hmiUrl?: string;
+    opcua_server_url: string;
+    hmi_url?: string;
     services: ServiceOptions[];
-    processValues: { name: string; communication: OpcUaNodeOptions[] }[];
+    process_values: DataAssemblyOptions[];
 }
 
 export interface ServiceOptions {
     name: string;
     communication: {
         OpMode: OpcUaNodeOptions;
-        ControlOp: OpcUaNodeOptions;
-        ControlExt: OpcUaNodeOptions;
-        ControlEnable: OpcUaNodeOptions;
-        State: OpcUaNodeOptions;
-        StrategyOp: OpcUaNodeOptions;
+        ControlOp?: OpcUaNodeOptions;
+        CommandMan?: OpcUaNodeOptions;
+        ControlExt?: OpcUaNodeOptions;
+        CommandExt?: OpcUaNodeOptions
+        ControlEnable?: OpcUaNodeOptions;
+        CommandEnable?: OpcUaNodeOptions;
+        State?: OpcUaNodeOptions;
+        CurrentState?: OpcUaNodeOptions;
+        StrategyOp?: OpcUaNodeOptions;
+        StrategyMan?: OpcUaNodeOptions;
         StrategyExt: OpcUaNodeOptions;
         CurrentStrategy: OpcUaNodeOptions;
-        ErrorMessage: OpcUaNodeOptions;
     };
     strategies: StrategyOptions[];
-    parameters: ServiceParameterOptions[];
+    parameters: DataAssemblyOptions[];
+}
+
+export interface DataAssemblyOptions {
+    name: string;
+    interface_class: string;
+    communication: OpcUaNodeOptions[];
 }
 
 export interface ServiceParameterOptions {
@@ -42,10 +52,16 @@ export interface ServiceParameterOptions {
 
 export interface StrategyOptions {
     id: string;
+    // name of strategy
     name: string;
+    // default strategy
     default: boolean;
+    // self-completing strategy
     sc: boolean;
-    parameters: ServiceParameterOptions[];
+    // strategyParameters of strategy
+    parameters: DataAssemblyOptions[];
+    // process values of strategy
+    processValues: DataAssemblyOptions[];
 }
 
 export interface OpcUaNodeOptions {

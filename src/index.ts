@@ -15,7 +15,14 @@ export {RecipeOptions,
     ScopeOptions,
 } from './RecipeOptions';
 
-export {OpcUaNodeOptions} from './ModuleOptions';
+export {
+    OpcUaNodeOptions,
+    ServiceOptions,
+    ModuleOptions,
+    DataAssemblyOptions,
+    StrategyOptions,
+    ServiceParameterOptions
+} from './ModuleOptions';
 
 export {
     ModuleInterface,
