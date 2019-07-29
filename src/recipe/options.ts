@@ -1,4 +1,5 @@
-import {ConditionType, ServiceCommand} from './enum';
+import {ServiceCommand} from '../service/enum';
+import {ConditionType} from './enum';
 
 /**
  * Options for loading recipes and modules
