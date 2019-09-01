@@ -1,5 +1,5 @@
-import {DataAssemblyOptions} from '../core/options';
 import {ServiceControlOptions} from '../core/dataAssembly';
+import {DataAssemblyOptions} from '../core/options';
 
 export interface ServiceOptions {
     name: string;
