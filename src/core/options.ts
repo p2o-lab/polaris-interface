@@ -4,6 +4,8 @@ import {BaseDataAssemblyOptions} from './dataAssembly';
 export interface ModuleOptions {
     id: string;
     opcua_server_url: string;
+    username?: string;
+    password?: string;
     hmi_url?: string;
     services: ServiceOptions[];
     process_values: DataAssemblyOptions[];
