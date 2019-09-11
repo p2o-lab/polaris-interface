@@ -3,6 +3,7 @@ import {BaseDataAssemblyOptions} from './dataAssembly';
 
 export interface ModuleOptions {
     id: string;
+    description?: string;
     opcua_server_url: string;
     username?: string;
     password?: string;
