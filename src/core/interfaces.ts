@@ -4,6 +4,7 @@ import {ParameterInterface, ServiceInterface} from '../service/interfaces';
 
 export interface ModuleInterface {
     id: string;
+    description?: string;
     endpoint: string;
     hmiUrl: string;
     connected: boolean;
