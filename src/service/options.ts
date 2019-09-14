@@ -6,9 +6,6 @@ export interface ServiceOptions {
     communication: ServiceControlOptions;
     strategies: StrategyOptions[];
     parameters?: DataAssemblyOptions[];
-    reportParameters?: DataAssemblyOptions[];
-    processValuesIn?: DataAssemblyOptions[];
-    processValuesOut?: DataAssemblyOptions[];
 }
 
 export interface StrategyOptions {
@@ -21,4 +18,7 @@ export interface StrategyOptions {
     sc: boolean;
     // strategyParameters of strategy
     parameters: DataAssemblyOptions[];
+    reportParameters?: DataAssemblyOptions[];
+    processValuesIn?: DataAssemblyOptions[];
+    processValuesOut?: DataAssemblyOptions[];
 }

@@ -24,6 +24,9 @@ export interface StrategyInterface {
     default: boolean;
     sc: boolean;
     parameters: ParameterInterface[];
+    processValuesIn: ParameterInterface[];
+    processValuesOut: ParameterInterface[];
+    reportParameters: ParameterInterface[];
 }
 
 export interface VirtualServiceInterface extends BaseServiceInterface {
