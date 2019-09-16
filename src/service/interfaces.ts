@@ -4,9 +4,7 @@ export interface BaseServiceInterface {
     name: string;
     status: string;
     parameters: ParameterInterface[];
-    reportParameters: ParameterInterface[];
-    processValuesIn: ParameterInterface[];
-    processValuesOut: ParameterInterface[];
+    strategies: StrategyInterface[];
     /** duration in seconds */
     lastChange: number;
     controlEnable: ControlEnableInterface;
@@ -14,7 +12,6 @@ export interface BaseServiceInterface {
 
 export interface ServiceInterface extends BaseServiceInterface {
     opMode: OpModeInterface;
-    strategies: StrategyInterface[];
     currentStrategy: string;
 }
 
@@ -31,7 +28,6 @@ export interface StrategyInterface {
 
 export interface VirtualServiceInterface extends BaseServiceInterface {
     type: string;
-    sc: boolean;
 }
 
 export interface ControlEnableInterface {
@@ -54,4 +50,5 @@ export interface ParameterInterface {
     unit?: string;
     readonly?: boolean;
     type?: string;
+    timestamp?: Date;
 }

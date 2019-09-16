@@ -5,6 +5,7 @@ export * from './recipe/interfaces';
 export * from './core/options';
 export * from './core/interfaces';
 export * from './core/dataAssembly';
+export * from './core/notification';
 
 export * from './service/interfaces';
 export * from './service/options';
