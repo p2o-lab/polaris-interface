@@ -23,8 +23,11 @@ export type BackendNotification =
         virtualService: VirtualServiceInterface;
     } |
     {
-        message: 'variable',
+        message: 'variable';
         variable: VariableChange;
+    } |
+    {
+        message: 'ping';
     };
 
 export interface VariableChange {
