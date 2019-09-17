@@ -14,6 +14,6 @@ export interface ModuleInterface {
 }
 
 export interface OpModeInterface {
-    state: 'on' | 'manual' | 'automatic';
+    state: 'off' | 'manual' | 'automatic';
     source: 'external' | 'internal';
 }
