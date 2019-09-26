@@ -26,10 +26,6 @@ export interface StrategyInterface {
     reportParameters: ParameterInterface[];
 }
 
-export interface VirtualServiceInterface extends BaseServiceInterface {
-    type: string;
-}
-
 export interface ControlEnableInterface {
     start: boolean;
     restart: boolean;

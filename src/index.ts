@@ -10,3 +10,6 @@ export * from './core/notification';
 export * from './service/interfaces';
 export * from './service/options';
 export * from './service/enum';
+
+export * from './virtualService/interfaces';
+export * from './virtualService/options';
