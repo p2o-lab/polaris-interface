@@ -41,6 +41,7 @@ export interface ControlEnableInterface {
 export interface ParameterInterface {
     name: string;
     value?: number | string | boolean;
+    requestedValue?: string;
     min?: number;
     max?: number;
     unit?: string;
