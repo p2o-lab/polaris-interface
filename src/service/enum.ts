@@ -2,6 +2,7 @@ export enum ServiceCommand {
     reset = 'reset',
     start = 'start',
     stop = 'stop',
+    hold = 'hold',
     unhold = 'unhold',
     pause = 'pause',
     resume = 'resume',
