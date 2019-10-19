@@ -12,8 +12,3 @@ export interface ModuleInterface {
     protected: boolean;
     process_values: ParameterInterface[];
 }
-
-export interface OpModeInterface {
-    state: 'off' | 'manual' | 'automatic';
-    source: 'external' | 'internal';
-}

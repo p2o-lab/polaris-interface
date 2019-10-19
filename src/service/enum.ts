@@ -9,3 +9,14 @@ export enum ServiceCommand {
     restart = 'restart',
     complete = 'complete',
 }
+
+export enum OperationMode {
+    Offline = 'offline',
+    Operator = 'operator',
+    Automatic = 'automatic',
+}
+
+export enum SourceMode {
+    Manual = 'manual',
+    Intern = 'intern'
+}

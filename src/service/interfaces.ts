@@ -1,4 +1,4 @@
-import {OpModeInterface} from '../core/interfaces';
+import {OperationMode, SourceMode} from './enum';
 
 export interface BaseServiceInterface {
     name: string;
@@ -11,7 +11,8 @@ export interface BaseServiceInterface {
 }
 
 export interface ServiceInterface extends BaseServiceInterface {
-    opMode: OpModeInterface;
+    operationMode: OperationMode;
+    sourceMode: SourceMode;
     currentStrategy: string;
 }
 
