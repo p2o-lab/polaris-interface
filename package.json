@@ -1,17 +1,22 @@
 {
   "name": "@p2olab/polaris-interface",
   "description": "interface definitions for polaris-frontend and polaris-backend",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "Markus Graube <markus.graube@tu-dresden.de>",
-  "repository": "git@github.com:p2o-lab/polaris-interface.git",
-  "homepage": "https://github.com/p2o-lab/polaris-interface",
+  "author": "Julius Lorenz <julius.lorenz@tu-dresden.de>",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
     "postversion": "npm publish"
+  },
+  "publishConfig": {
+    "registry": "http://nexus.plt.et.tu-dresden.de:8081/repository/npm_plt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "svn@dev.plt.et.tu-dresden.de:modulare-automation/polaris-interface.git"
   },
   "devDependencies": {
     "tslint": "^5.16.0",
