@@ -4,7 +4,7 @@ export interface BaseServiceInterface {
     name: string;
     status: string;
     parameters: ParameterInterface[];
-    strategies: StrategyInterface[];
+    procedures: ProcedureInterface[];
     /** duration in seconds */
     lastChange: number;
     controlEnable: ControlEnableInterface;
@@ -16,17 +16,17 @@ export interface ServiceInterface extends BaseServiceInterface {
     currentStrategy: string;
 }
 
-export interface StrategyInterface {
+export interface ProcedureInterface {
     id: string;
     name: string;
-    default: boolean;
-    sc: boolean;
+    isDefault: boolean;
+    isSelfComplete: boolean;
     parameters: ParameterInterface[];
     processValuesIn: ParameterInterface[];
     processValuesOut: ParameterInterface[];
     reportParameters: ParameterInterface[];
 }
-
+// TODO: Add hold
 export interface ControlEnableInterface {
     start: boolean;
     restart: boolean;

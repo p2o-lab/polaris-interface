@@ -19,5 +19,5 @@ export enum OperationMode {
 
 export enum SourceMode {
     Manual = 'manual',
-    Intern = 'intern'
+    Intern = 'intern',
 }
