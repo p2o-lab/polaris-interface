@@ -13,7 +13,7 @@ export interface BaseServiceInterface {
 export interface ServiceInterface extends BaseServiceInterface {
     operationMode: OperationMode;
     sourceMode: SourceMode;
-    currentStrategy: string;
+    currentProcedure: string;
 }
 
 export interface ProcedureInterface {
