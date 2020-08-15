@@ -17,10 +17,10 @@ export interface ServiceInterface extends BaseServiceInterface {
 }
 
 export interface ProcedureInterface {
-    id: string;
     name: string;
-    isDefault: boolean;
-    isSelfComplete: boolean;
+    ProcedureID: string;
+    IsDefault: boolean;
+    IsSelfCompleting: boolean;
     parameters: ParameterInterface[];
     processValuesIn: ParameterInterface[];
     processValuesOut: ParameterInterface[];
