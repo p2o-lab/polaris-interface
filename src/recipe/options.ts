@@ -46,8 +46,8 @@ export interface OperationOptions {
     module?: string;
     /** service name */
     service: string;
-    /** strategy name (default strategy is used if omitted) */
-    strategy?: string;
+    /** procedure name (default procedure is used if omitted) */
+    procedure?: string;
     /** command name */
     command: ServiceCommand;
     /** optional parameters for start or restart */
@@ -74,7 +74,7 @@ export interface ScopeOptions {
     module?: string;
     /** service name */
     service?: string;
-    strategy?: string;
+    procedure?: string;
     dataAssembly: string;
     variable: string;
 }
