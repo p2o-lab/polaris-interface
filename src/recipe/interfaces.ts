@@ -40,7 +40,7 @@ export interface TransitionInterface {
 export interface OperationInterface {
     module: string;
     service: string;
-    strategy?: string;
+    procedure?: string;
     command: ServiceCommand;
     parameter?: ParameterOptions[];
     state?: 'executing' | 'completed' | 'aborted';
