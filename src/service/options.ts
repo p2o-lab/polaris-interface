@@ -15,7 +15,7 @@ export interface ProcedureOptions {
     // default procedure
     isDefault: boolean;
     // self-completing procedure
-    isSelfComplete: boolean;
+    isSelfCompleting: boolean;
     // Parameters of procedure
     parameters: DataAssemblyOptions[];
     reportParameters?: DataAssemblyOptions[];
