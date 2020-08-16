@@ -26,13 +26,14 @@ export interface ProcedureInterface {
     processValuesOut: ParameterInterface[];
     reportParameters: ParameterInterface[];
 }
-// TODO: Add hold
+
 export interface ControlEnableInterface {
     start: boolean;
     restart: boolean;
     pause: boolean;
     resume: boolean;
     complete: boolean;
+    hold: boolean;
     unhold: boolean;
     stop: boolean;
     abort: boolean;

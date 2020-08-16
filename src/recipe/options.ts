@@ -85,7 +85,7 @@ export interface TransitionOptions {
 }
 
 export type ConditionOptions = AndConditionOptions | TimeConditionOptions | OrConditionOptions |
-    TimeConditionOptions | StateConditionOptions | VariableConditionOptions | NotConditionOptions |
+     StateConditionOptions | VariableConditionOptions | NotConditionOptions |
     ExpressionConditionOptions;
 
 export interface BaseConditionOptions {
