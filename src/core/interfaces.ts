@@ -2,7 +2,7 @@ import {ParameterInterface, ServiceInterface} from '../service/interfaces';
 
 /** Exporting interfaces which can retrieved from backend */
 
-export interface ModuleInterface {
+export interface PEAInterface {
     id: string;
     description?: string;
     endpoint: string;
