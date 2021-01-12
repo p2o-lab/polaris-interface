@@ -1,10 +1,9 @@
 {
   "name": "@p2olab/polaris-interface",
   "description": "interface definitions for polaris-frontend and polaris-backend",
-  "version": "3.0.0-alpha0.2",
+  "version": "3.0.0-alpha0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "author": "Julius Lorenz <julius.lorenz@tu-dresden.de>",
   "repository": "git@github.com:p2o-lab/polaris-interface.git",
   "homepage": "https://github.com/p2o-lab/polaris-interface",
   "license": "MIT",
@@ -16,5 +15,12 @@
   "devDependencies": {
     "tslint": "^5.16.0",
     "typescript": "^3.4.5"
-  }
+  },
+  "author": "P2O-Lab <p2o-lab@mailbox.tu-dresden.de>",
+  "contributors": [
+    "Sebastian Heinze",
+    "Christoph Jesaja Heidelbach",
+    "Markus Graube",
+    "Julius Lorenz <julius.lorenz@tu-dresden.de>"
+  ]
 }
