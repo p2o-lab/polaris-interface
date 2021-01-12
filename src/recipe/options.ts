@@ -23,8 +23,8 @@ export interface RecipeOptions {
     steps: StepOptions[];
     /** requirements for starting the recipe */
     requirements?: {
-        /** id of modules to be loaded and connected to */
-        modules: string[];
+        /** id of PEAs to be loaded and connected to */
+        peas: string[];
         /** state of autoreset */
         autoreset: boolean;
     };
@@ -43,7 +43,7 @@ export interface StepOptions {
 
 export interface OperationOptions {
     /** module id (can be omitted if only one module is registered) */
-    module?: string;
+    pea?: string;
     /** service name */
     service: string;
     /** procedure name (default procedure is used if omitted) */
@@ -71,7 +71,7 @@ export interface ScopeOptions {
     /** name of variable which should be replaced in value */
     name: string;
     /** module id (can be omitted if only one module is registered) */
-    module?: string;
+    pea?: string;
     /** service name */
     service?: string;
     procedure?: string;
@@ -109,8 +109,8 @@ export interface NotConditionOptions extends BaseConditionOptions {
 
 export interface StateConditionOptions extends BaseConditionOptions {
     type: ConditionType.state;
-    // module id (can be omitted if only one module is registered)
-    module?: string;
+    // pea id (can be omitted if only one pea is registered)
+    pea?: string;
     // service name
     service: string;
     state: string;
@@ -124,7 +124,7 @@ export interface TimeConditionOptions extends BaseConditionOptions {
 
 export interface VariableConditionOptions extends BaseConditionOptions {
     type: ConditionType.variable;
-    module: string;
+    pea: string;
     dataAssembly: string;
     variable: string;
     value: string | number;
