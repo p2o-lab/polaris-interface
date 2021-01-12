@@ -1,4 +1,4 @@
-import {OperationMode, SourceMode} from './enum';
+import {OperationMode, ServiceSourceMode} from './enum';
 
 export interface BaseServiceInterface {
     name: string;
@@ -12,7 +12,7 @@ export interface BaseServiceInterface {
 
 export interface ServiceInterface extends BaseServiceInterface {
     operationMode: OperationMode;
-    sourceMode: SourceMode;
+    serviceSourceMode: ServiceSourceMode;
     currentProcedure: string;
 }
 

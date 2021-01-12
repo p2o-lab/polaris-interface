@@ -21,3 +21,8 @@ export enum SourceMode {
     Manual = 'manual',
     Intern = 'intern',
 }
+
+export enum ServiceSourceMode {
+    Extern = 'extern',
+    Intern = 'intern',
+}
