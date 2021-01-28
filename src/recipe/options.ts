@@ -80,7 +80,7 @@ export interface ScopeOptions {
 }
 
 export interface TransitionOptions {
-    next_step: string;
+    nextStep: string;
     condition: ConditionOptions;
 }
 

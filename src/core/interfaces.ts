@@ -10,5 +10,5 @@ export interface PEAInterface {
     connected: boolean;
     services?: ServiceInterface[];
     protected: boolean;
-    process_values: ParameterInterface[];
+    processValues: ParameterInterface[];
 }
