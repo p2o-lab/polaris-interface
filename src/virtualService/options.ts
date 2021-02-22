@@ -1,12 +1,12 @@
 import {ConditionOptions, OperationOptions} from '../recipe/options';
 import {ParameterInterface} from '../service/interfaces';
 
-export interface VirtualServiceOptions {
+export interface POLServiceOptions {
     name: string;
     type: string;
 }
 
-export interface AggregatedServiceOptions extends VirtualServiceOptions {
+export interface AggregatedServiceOptions extends POLServiceOptions {
     type: 'aggregatedService';
     description: string;
     version: string;

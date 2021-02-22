@@ -1,4 +1,4 @@
-import {PEAInterface, PlayerInterface, RecipeInterface, ServiceInterface, VirtualServiceInterface} from '..';
+import {PEAInterface, PlayerInterface, POLServiceInterface, RecipeInterface, ServiceInterface} from '..';
 
 export type BackendNotification =
     {
@@ -19,8 +19,8 @@ export type BackendNotification =
         service: ServiceInterface;
     } |
     {
-        message: 'virtualService';
-        virtualService: VirtualServiceInterface;
+        message: 'polService';
+        polService: POLServiceInterface;
     } |
     {
         message: 'variable';
