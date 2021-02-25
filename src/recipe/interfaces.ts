@@ -33,7 +33,7 @@ export interface StepInterface {
 }
 
 export interface TransitionInterface {
-    next_step: string;
+    nextStep: string;
     condition: ConditionOptions;
 }
 

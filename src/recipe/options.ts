@@ -18,7 +18,7 @@ export interface RecipeOptions {
     /** author of recipe */
     author: string;
     /** name of initial step of recipe */
-    initial_step: string;
+    initialStep: string;
     /** list of recipe steps */
     steps: StepOptions[];
     /** requirements for starting the recipe */
