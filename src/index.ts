@@ -11,5 +11,5 @@ export * from './service/interfaces';
 export * from './service/options';
 export * from './service/enum';
 
-export * from './virtualService/interfaces';
-export * from './virtualService/options';
+export * from './polService/interfaces';
+export * from './polService/options';

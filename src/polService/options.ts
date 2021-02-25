@@ -16,7 +16,7 @@ export interface AggregatedServiceOptions extends POLServiceOptions {
     commandEnable: CommandEnableOptions;
     selfCompleting: boolean;
 }
-// TODO: redefine HOLD for user interaction
+
 // CommandEnableOptions defines the conditions as expressions for the commands to be triggered externally
 export interface CommandEnableOptions {
     // only in IDLE
