@@ -7,13 +7,13 @@ export interface BaseServiceInterface {
     procedures: ProcedureInterface[];
     /** duration in seconds */
     lastChange: number;
-    controlEnable: ControlEnableInterface;
+    controlEnable: CommandEnableInterface;
+    currentProcedure: string;
 }
 
 export interface ServiceInterface extends BaseServiceInterface {
     operationMode: OperationMode;
     serviceSourceMode: ServiceSourceMode;
-    currentProcedure: string;
 }
 
 export interface ProcedureInterface {
@@ -27,7 +27,7 @@ export interface ProcedureInterface {
     reportParameters: ParameterInterface[];
 }
 
-export interface ControlEnableInterface {
+export interface CommandEnableInterface {
     start: boolean;
     restart: boolean;
     pause: boolean;
