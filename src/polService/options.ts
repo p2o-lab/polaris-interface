@@ -10,7 +10,7 @@ export interface AggregatedServiceOptions extends POLServiceOptions {
     type: 'aggregatedService';
     description: string;
     version: string;
-    necessaryServices: Array<{ module: string; service: string }>;
+    necessaryServices: Array<{ pea: string; service: string; procedure: string}>;
     parameters: ParameterInterface[];
     stateMachine: StateMachineOptions;
     commandEnable: CommandEnableOptions;
