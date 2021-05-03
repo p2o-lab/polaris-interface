@@ -3,7 +3,8 @@ import {ParameterInterface, ServiceInterface} from '../service/interfaces';
 /** Exporting interfaces which can retrieved from backend */
 
 export interface PEAInterface {
-    id: string;
+    name: string;
+    pimadIdentifier: string;
     description?: string;
     endpoint: string;
     hmiUrl: string;
