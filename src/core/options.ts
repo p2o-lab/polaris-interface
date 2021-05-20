@@ -9,13 +9,13 @@ export interface PEAOptions {
     password?: string;
     hmiUrl?: string;
     services: ServiceOptions[];
-    processValues: DataAssemblyOptions[];
+    dataAssemblies: DataAssemblyOptions[];
 }
 
 export interface DataAssemblyOptions {
     name: string;
-    interfaceClass: string;
-    communication: BaseDataAssemblyOptions;
+    metaModelRef: string;
+    dataItems: BaseDataAssemblyOptions;
 }
 
 export interface OpcUaNodeOptions {
@@ -24,7 +24,7 @@ export interface OpcUaNodeOptions {
     // recent value
     value?: number | string | boolean;
     // this variable contains the *namespace url* of the node
-    namespaceIndex: string;
+    namespaceUrl: string;
     // node id of the node as string (e.g. 's=myNode2' or 'i=12')
     nodeId: string;
 }
