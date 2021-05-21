@@ -24,7 +24,7 @@ export interface OpcUaNodeOptions {
     // recent value
     value?: number | string | boolean;
     // this variable contains the *namespace url* of the node
-    namespaceUrl: string;
+    namespaceIndex: string;
     // node id of the node as string (e.g. 's=myNode2' or 'i=12')
     nodeId: string;
 }
