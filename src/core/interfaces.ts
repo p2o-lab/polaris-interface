@@ -4,6 +4,7 @@ import {ParameterInterface, ServiceInterface} from '../service/interfaces';
 
 export interface PEAInterface {
     name: string;
+    id: string;
     pimadIdentifier: string;
     description?: string;
     endpoint: string;
