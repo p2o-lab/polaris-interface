@@ -30,3 +30,10 @@ export interface OpcUaNodeOptions {
     // node id of the node as string (e.g. 's=myNode2' or 'i=12')
     nodeId: string;
 }
+
+export interface ServerSettingsOptions {
+    username: string;
+    password: string;
+    serverUrl: string;
+    id: string;
+}
