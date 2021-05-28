@@ -3,6 +3,7 @@ import {BaseDataAssemblyOptions} from './dataAssembly';
 
 export interface PEAOptions {
     id: string;
+    pimadIdentifier: string;
     description?: string;
     opcuaServerUrl: string;
     username?: string;
