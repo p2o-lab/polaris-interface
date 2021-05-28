@@ -2,6 +2,7 @@ import {ServiceOptions} from '../service/options';
 import {BaseDataAssemblyOptions} from './dataAssembly';
 
 export interface PEAOptions {
+    name: string;
     id: string;
     pimadIdentifier: string;
     description?: string;
