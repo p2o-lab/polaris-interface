@@ -12,5 +12,10 @@ export interface PEAInterface {
     connected: boolean;
     services?: ServiceInterface[];
     protected: boolean;
-    processValues: ParameterInterface[];
+    processValues: ProcessValuesInterface[];
+}
+
+export interface ProcessValuesInterface {
+    name: string;
+    dataItems: Array<{[key: string]: string }>;
 }
