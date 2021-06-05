@@ -13,3 +13,5 @@ export * from './service/enum';
 
 export * from './polService/interfaces';
 export * from './polService/options';
+
+export * from './pimad/interfaces';

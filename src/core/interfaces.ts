@@ -15,6 +15,9 @@ export interface PEAInterface {
     processValues: ProcessValuesInterface[];
 }
 
+/**
+ * This Interface is used to transfer ProcessValues/Variables to frontend
+ */
 export interface ProcessValuesInterface {
     name: string;
     dataItems: Array<{[key: string]: string }>;
