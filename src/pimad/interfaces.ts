@@ -10,7 +10,7 @@ export interface PEAModel {
     name: string;
     endpoint: Endpoint[];
     pimadIdentifier: string;
-    services: any[];
+    services: ServiceModel[];
     initialized: boolean;
 }
 export interface DataAssemblyModel {
@@ -55,3 +55,34 @@ export interface Endpoint {
     description: string;
     pimadIdentifier: string;
 }
+export interface Attribute {
+    dataType: string;
+    name: string;
+    initialized: boolean;
+    value: string;
+}
+
+export interface ProcedureModel {
+    initialized: boolean;
+    attributes: Attribute[];
+    dataAssembly: DataAssemblyModel;
+    metaModelRef: string;
+    name: string;
+    parameters: any[];
+    dataSourceIdentifier: string;
+    pimadIdentifier: string;
+}
+
+export interface ServiceModel {
+    initialized: boolean;
+    attributes: any[];
+    dataAssembly: DataAssemblyModel;
+    metaModelRef: string;
+    name: string;
+    parameters: any[];
+    procedures: ProcedureModel[];
+    dataSourceIdentifier: string;
+    pimadIdentifier: string;
+}
+
+
