@@ -1,7 +1,7 @@
 {
   "name": "@p2olab/polaris-interface",
   "description": "interface definitions for polaris-frontend and polaris-backend",
-  "version": "3.0.0-alpha8",
+  "version": "3.0.0-alpha9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "git@github.com:p2o-lab/polaris-interface.git",
