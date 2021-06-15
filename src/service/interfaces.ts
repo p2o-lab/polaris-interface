@@ -8,7 +8,7 @@ export interface BaseServiceInterface {
     /** duration in seconds */
     lastChange: number;
     controlEnable: CommandEnableInterface;
-    currentProcedure: string;
+    currentProcedure: string | undefined;
 }
 
 export interface ServiceInterface extends BaseServiceInterface {
