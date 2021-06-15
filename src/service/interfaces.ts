@@ -9,6 +9,7 @@ export interface BaseServiceInterface {
     lastChange: number;
     controlEnable: CommandEnableInterface;
     currentProcedure: string | undefined;
+    peaId: string;
 }
 
 export interface ServiceInterface extends BaseServiceInterface {
