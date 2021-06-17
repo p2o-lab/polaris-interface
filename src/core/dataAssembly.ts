@@ -1,12 +1,12 @@
 import {OpcUaNodeOptions} from './options';
 
 export interface BaseDataAssemblyOptions {
-    TagName: OpcUaNodeOptions;
-    TagDescription: OpcUaNodeOptions;
+    TagName: string;
+    TagDescription: string;
 }
 
 export type IndicatorElementDataAssemblyOptions = BaseDataAssemblyOptions & {
-    WQC: OpcUaNodeOptions;
+    WQC: OpcUaNodeOptions | number;
 };
 
 // Mixins
@@ -64,7 +64,7 @@ export type OpModeDataAssemblyOptions = BaseDataAssemblyOptions & {
 };
 
 export type OSLevelDataAssemblyOptions = BaseDataAssemblyOptions & {
-    OSLevel: OpcUaNodeOptions;
+    OSLevel: OpcUaNodeOptions | number;
 };
 
 export type ResetDataAssemblyOptions = BaseDataAssemblyOptions & {
