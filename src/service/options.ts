@@ -17,6 +17,7 @@ export interface ProcedureOptions {
     // self-completing procedure
     isSelfCompleting: boolean;
     // Parameters of procedure
+    dataAssembly: DataAssemblyOptions[]; // e.g. HealthStateView
     parameters: DataAssemblyOptions[];
     reportParameters?: DataAssemblyOptions[];
     processValuesIn?: DataAssemblyOptions[];
