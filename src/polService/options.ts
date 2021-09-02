@@ -1,16 +1,16 @@
 import {ConditionOptions, OperationOptions} from '../recipe/options';
 import {ParameterInterface} from '../service/interfaces';
 
-export interface VirtualServiceOptions {
+export interface POLServiceOptions {
     name: string;
     type: string;
 }
 
-export interface AggregatedServiceOptions extends VirtualServiceOptions {
+export interface AggregatedServiceOptions extends POLServiceOptions {
     type: 'aggregatedService';
     description: string;
     version: string;
-    necessaryServices: Array<{ module: string; service: string }>;
+    necessaryServices: Array<{ pea: string; service: string; procedure: string}>;
     parameters: ParameterInterface[];
     stateMachine: StateMachineOptions;
     commandEnable: CommandEnableOptions;
@@ -33,7 +33,7 @@ export interface CommandEnableOptions {
     complete: string;
     // only in HELD
     unhold: string;
-    // defines the condition when virtual service automatically goes into HOLDING (without any user interaction)
+    // only in STARTING, EXECUTE, COMPLETING, COMPLETED, PAUSED, PAUSING, RESUMING, UNHOLDING
     hold: string;
     // for the following commands there should not exist further condition except the current state
     // abort (all the time except in ABORTED)
@@ -41,7 +41,6 @@ export interface CommandEnableOptions {
 
     // all state-change transitions are automatically triggered when the underlying petri net
     // of the appropriate step is finished
-
 }
 
 /**

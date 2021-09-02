@@ -8,7 +8,7 @@ import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
 export interface RecipeInterface {
     id: string;
     status: RecipeState;
-    modules: string[];
+    peas: string[];
     currentStep: StepInterface;
     options: RecipeOptions;
     protected: boolean;
@@ -33,14 +33,14 @@ export interface StepInterface {
 }
 
 export interface TransitionInterface {
-    next_step: string;
+    nextStep: string;
     condition: ConditionOptions;
 }
 
 export interface OperationInterface {
-    module: string;
+    pea: string;
     service: string;
-    strategy?: string;
+    procedure?: string;
     command: ServiceCommand;
     parameter?: ParameterOptions[];
     state?: 'executing' | 'completed' | 'aborted';

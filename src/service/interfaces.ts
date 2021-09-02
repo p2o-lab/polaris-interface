@@ -1,38 +1,40 @@
-import {OperationMode, SourceMode} from './enum';
+import {OperationMode, ServiceSourceMode} from './enum';
 
 export interface BaseServiceInterface {
     name: string;
     status: string;
     parameters: ParameterInterface[];
-    strategies: StrategyInterface[];
+    procedures: ProcedureInterface[];
     /** duration in seconds */
     lastChange: number;
-    controlEnable: ControlEnableInterface;
+    controlEnable: CommandEnableInterface;
+    currentProcedure: string | undefined;
 }
 
 export interface ServiceInterface extends BaseServiceInterface {
+    peaId: string;
     operationMode: OperationMode;
-    sourceMode: SourceMode;
-    currentStrategy: string;
+    serviceSourceMode: ServiceSourceMode;
 }
 
-export interface StrategyInterface {
-    id: string;
+export interface ProcedureInterface {
     name: string;
-    default: boolean;
-    sc: boolean;
+    id: string;
+    isDefault: boolean;
+    isSelfCompleting: boolean;
     parameters: ParameterInterface[];
     processValuesIn: ParameterInterface[];
     processValuesOut: ParameterInterface[];
     reportParameters: ParameterInterface[];
 }
 
-export interface ControlEnableInterface {
+export interface CommandEnableInterface {
     start: boolean;
     restart: boolean;
     pause: boolean;
     resume: boolean;
     complete: boolean;
+    hold: boolean;
     unhold: boolean;
     stop: boolean;
     abort: boolean;

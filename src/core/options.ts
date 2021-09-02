@@ -1,30 +1,39 @@
 import {ServiceOptions} from '../service/options';
 import {BaseDataAssemblyOptions} from './dataAssembly';
 
-export interface ModuleOptions {
+export interface PEAOptions {
+    name: string;
     id: string;
+    pimadIdentifier: string;
     description?: string;
-    opcua_server_url: string;
+    opcuaServerUrl: string;
     username?: string;
     password?: string;
-    hmi_url?: string;
+    hmiUrl?: string;
     services: ServiceOptions[];
-    process_values: DataAssemblyOptions[];
+    dataAssemblies: DataAssemblyOptions[];
 }
 
 export interface DataAssemblyOptions {
     name: string;
-    interface_class: string;
-    communication: BaseDataAssemblyOptions;
+    metaModelRef: string;
+    dataItems: BaseDataAssemblyOptions;
 }
 
 export interface OpcUaNodeOptions {
     // data type of OPC UA node
-    data_type: string;
+    dataType: string;
     // recent value
     value?: number | string | boolean;
     // this variable contains the *namespace url* of the node
-    namespace_index: string;
+    namespaceIndex: string;
     // node id of the node as string (e.g. 's=myNode2' or 'i=12')
-    node_id: string;
+    nodeId: string;
+}
+
+export interface ServerSettingsOptions {
+    username: string;
+    password: string;
+    serverUrl: string;
+    id: string;
 }

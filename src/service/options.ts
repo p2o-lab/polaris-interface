@@ -4,19 +4,19 @@ import {DataAssemblyOptions} from '../core/options';
 export interface ServiceOptions {
     name: string;
     communication: ServiceControlOptions;
-    strategies: StrategyOptions[];
+    procedures: ProcedureOptions[];
     parameters?: DataAssemblyOptions[];
 }
 
-export interface StrategyOptions {
+export interface ProcedureOptions {
     id: string;
-    // name of strategy
+    // name of procedure
     name: string;
-    // default strategy
-    default: boolean;
-    // self-completing strategy
-    sc: boolean;
-    // strategyParameters of strategy
+    // default procedure
+    isDefault: boolean;
+    // self-completing procedure
+    isSelfCompleting: boolean;
+    // Parameters of procedure
     parameters: DataAssemblyOptions[];
     reportParameters?: DataAssemblyOptions[];
     processValuesIn?: DataAssemblyOptions[];

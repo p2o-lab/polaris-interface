@@ -1,4 +1,4 @@
-import {ModuleInterface, PlayerInterface, RecipeInterface, ServiceInterface, VirtualServiceInterface} from '..';
+import {PEAInterface, PlayerInterface, POLServiceInterface, RecipeInterface, ServiceInterface} from '..';
 
 export type BackendNotification =
     {
@@ -10,17 +10,17 @@ export type BackendNotification =
         recipes: RecipeInterface[];
     } |
     {
-        message: 'module';
-        module: ModuleInterface;
+        message: 'pea';
+        pea: PEAInterface;
     } |
     {
         message: 'service';
-        moduleId: string;
+        peaId: string;
         service: ServiceInterface;
     } |
     {
-        message: 'virtualService';
-        virtualService: VirtualServiceInterface;
+        message: 'polService';
+        polService: POLServiceInterface;
     } |
     {
         message: 'variable';
@@ -31,9 +31,9 @@ export type BackendNotification =
     };
 
 export interface VariableChange {
-    timestampPfe: Date;
-    timestampModule: Date;
-    module: string;
+    timestampPOL: Date;
+    timestampPEA: Date;
+    pea: string;
     variable: string;
     value: number | string;
     unit: string;

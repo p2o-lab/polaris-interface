@@ -18,13 +18,13 @@ export interface RecipeOptions {
     /** author of recipe */
     author: string;
     /** name of initial step of recipe */
-    initial_step: string;
+    initialStep: string;
     /** list of recipe steps */
     steps: StepOptions[];
     /** requirements for starting the recipe */
     requirements?: {
-        /** id of modules to be loaded and connected to */
-        modules: string[];
+        /** id of PEAs to be loaded and connected to */
+        peas: string[];
         /** state of autoreset */
         autoreset: boolean;
     };
@@ -43,11 +43,11 @@ export interface StepOptions {
 
 export interface OperationOptions {
     /** module id (can be omitted if only one module is registered) */
-    module?: string;
+    pea?: string;
     /** service name */
     service: string;
-    /** strategy name (default strategy is used if omitted) */
-    strategy?: string;
+    /** procedure name (default procedure is used if omitted) */
+    procedure?: string;
     /** command name */
     command: ServiceCommand;
     /** optional parameters for start or restart */
@@ -71,21 +71,21 @@ export interface ScopeOptions {
     /** name of variable which should be replaced in value */
     name: string;
     /** module id (can be omitted if only one module is registered) */
-    module?: string;
+    pea?: string;
     /** service name */
     service?: string;
-    strategy?: string;
+    procedure?: string;
     dataAssembly: string;
     variable: string;
 }
 
 export interface TransitionOptions {
-    next_step: string;
+    nextStep: string;
     condition: ConditionOptions;
 }
 
 export type ConditionOptions = AndConditionOptions | TimeConditionOptions | OrConditionOptions |
-    TimeConditionOptions | StateConditionOptions | VariableConditionOptions | NotConditionOptions |
+     StateConditionOptions | VariableConditionOptions | NotConditionOptions |
     ExpressionConditionOptions;
 
 export interface BaseConditionOptions {
@@ -109,8 +109,8 @@ export interface NotConditionOptions extends BaseConditionOptions {
 
 export interface StateConditionOptions extends BaseConditionOptions {
     type: ConditionType.state;
-    // module id (can be omitted if only one module is registered)
-    module?: string;
+    // pea id (can be omitted if only one pea is registered)
+    pea?: string;
     // service name
     service: string;
     state: string;
@@ -124,7 +124,7 @@ export interface TimeConditionOptions extends BaseConditionOptions {
 
 export interface VariableConditionOptions extends BaseConditionOptions {
     type: ConditionType.variable;
-    module: string;
+    pea: string;
     dataAssembly: string;
     variable: string;
     value: string | number;
