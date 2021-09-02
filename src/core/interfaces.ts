@@ -12,13 +12,5 @@ export interface PEAInterface {
     connected: boolean;
     services?: ServiceInterface[];
     protected: boolean;
-    processValues: ProcessValuesInterface[];
-}
-
-/**
- * This Interface is used to transfer ProcessValues/Variables to frontend
- */
-export interface ProcessValuesInterface {
-    name: string;
-    dataItems: Array<{[key: string]: string }>;
+    processValues: ParameterInterface[];
 }
