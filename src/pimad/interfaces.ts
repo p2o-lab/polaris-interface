@@ -68,9 +68,12 @@ export interface ProcedureModel {
     dataAssembly: DataAssemblyModel;
     metaModelRef: string;
     name: string;
-    parameters: any[];
+    parameters: DataAssemblyModel[];
     dataSourceIdentifier: string;
     pimadIdentifier: string;
+    reportValues: DataAssemblyModel[];
+    processValuesIn: DataAssemblyModel[];
+    processValuesOut: DataAssemblyModel[];
 }
 
 export interface ServiceModel {
@@ -84,5 +87,3 @@ export interface ServiceModel {
     dataSourceIdentifier: string;
     pimadIdentifier: string;
 }
-
-
