@@ -1,17 +1,9 @@
-import {ParameterInterface} from '../service/interfaces';
-
 export interface PEAHolderInterface {
     id: string;
     peaId: string;
-    name: string;
-    status: Status;
     type: string;
-    alarmMessage: string;
     occupied: boolean;
-    connected: boolean;
-    chartData: { y: number[], x: number[] };
-    parametersIn: ParameterInterface[];
-    parametersOut: ParameterInterface[];
+
 }
 
 export interface AlarmItemInterface {
