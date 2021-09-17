@@ -1,9 +1,23 @@
+import {ParameterInterface} from '../service/interfaces';
+
+// TODO: could or should be combined with PEAInterface in the future
+export interface PEAViewModelInterface {
+    peaId: string;
+    name: string;
+    connected: boolean;
+    status: Status;
+    alarmMessage: string;
+    type: string;
+    description: string;
+    parametersIn: ParameterInterface[];
+    parametersOut: ParameterInterface[];
+}
+
 export interface PEAHolderInterface {
     id: string;
     peaId: string;
     type: string;
     occupied: boolean;
-
 }
 
 export interface AlarmItemInterface {
