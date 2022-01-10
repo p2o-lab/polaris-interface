@@ -1,20 +1,31 @@
 {
   "name": "@p2olab/polaris-interface",
   "description": "interface definitions for polaris-frontend and polaris-backend",
-  "version": "3.0.0-alpha15",
+  "version": "3.0.0-alpha16",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "git@github.com:p2o-lab/polaris-interface.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/p2o-lab/polaris-interface.git"
+  },
   "homepage": "https://github.com/p2o-lab/polaris-interface",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
+    "lint": "eslint -c .eslintrc.js --ext .ts src",
+    "prepare": "npm run lint && npm run build",
     "postversion": "npm publish"
   },
   "devDependencies": {
-    "tslint": "^5.16.0",
-    "typescript": "^3.4.5"
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsdoc": "^37.6.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "typescript": "^4.5.4"
   },
   "author": "P2O-Lab <p2o-lab@mailbox.tu-dresden.de>",
   "contributors": [
@@ -23,5 +34,8 @@
     "Markus Graube",
     "Julius Lorenz <julius.lorenz@tu-dresden.de>",
     "Tuan Son Dinh <tuansondinh96@gmail.com"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/p2o-lab/polaris-interface/issues"
+  }
 }

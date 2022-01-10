@@ -13,7 +13,3 @@ export * from './service/enum';
 
 export * from './polService/interfaces';
 export * from './polService/options';
-
-export * from './pimad/interfaces';
-
-export * from './mockup-backend-evaluation/interfaces';
