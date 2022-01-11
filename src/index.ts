@@ -6,6 +6,7 @@ export * from './core/options';
 export * from './core/interfaces';
 export * from './core/dataAssembly';
 export * from './core/notification';
+export * from './core/connection/interfaces';
 
 export * from './service/interfaces';
 export * from './service/options';
