@@ -41,8 +41,10 @@ export enum OpcUaAuthenticationType{
   Certificate =  'Certificate'
 }
 
-export interface OpcUaConnectionSettingsInfo{
+export interface OpcUaConnectionInfo{
   endpointUrl: string;
+  connected: boolean;
+  monitoredItemsCount: number;
   securitySettings: OpcUaSecuritySettings;
   authenticationSettings: OpcUaAuthenticationType;
 }
