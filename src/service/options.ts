@@ -9,15 +9,10 @@ export interface ServiceOptions {
 }
 
 export interface ProcedureOptions {
-  id: string;
-  // name of procedure
+  procedureId: number;
   name: string;
-  // default procedure
-  isDefault: boolean;
-  // self-completing procedure
   isSelfCompleting: boolean;
-  // Parameters of procedure
-  dataAssembly: DataAssemblyOptions[]; // e.g. HealthStateView
+  dataAssemblies: DataAssemblyOptions[];
   parameters: DataAssemblyOptions[];
   reportParameters?: DataAssemblyOptions[];
   processValuesIn?: DataAssemblyOptions[];
