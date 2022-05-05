@@ -17,9 +17,11 @@ export interface ServiceInterface extends BaseServiceInterface {
   peaId: string;
   operationMode: OperationMode;
   serviceSourceMode: ServiceSourceMode;
+  osLevel: number;
 }
 
 export interface ProcedureInterface {
+  id: string;
   name: string;
   procedureId: number;
   isSelfCompleting: boolean;
