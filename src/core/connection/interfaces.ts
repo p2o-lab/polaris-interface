@@ -1,9 +1,21 @@
 
-export interface OpcUaAdapterInfo{
+export interface ConnectionHandlerInfo{
   id: string;
   name?: string;
+  adapterInfo: AdapterInfo[];
+}
+
+export interface AdapterInfo {
+  id: string;
+  type: string;
+  name?: string;
   connected: boolean;
+  monitoringActive: boolean;
   monitoredItemsCount: number;
+}
+
+export interface OpcUaAdapterInfo extends AdapterInfo{
+  type: 'OpcUa';
   currentEndpointId: string | undefined;
   endpoints: OpcUaEndpointInfo[];
 }
