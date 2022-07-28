@@ -4,7 +4,7 @@ export interface OpcUaAdapterInfo{
   name?: string;
   connected: boolean;
   monitoredItemsCount: number;
-  currentEndpointId: string;
+  currentEndpointId: string | undefined;
   endpoints: OpcUaEndpointInfo[];
 }
 
