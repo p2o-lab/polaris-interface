@@ -1,16 +1,16 @@
 import {ParameterInterface, ServiceInterface} from '../service/interfaces';
+import {ConnectionInfo} from './connection/interfaces';
 
 /** Exporting interfaces which can retrieved from backend */
 
 export interface PEAInterface {
-  name: string;
   id: string;
   pimadIdentifier: string;
+  name: string;
   description?: string;
-  endpoint: string;
-  hmiUrl: string;
-  connected: boolean;
+  connectionInfo: ConnectionInfo;
   services?: ServiceInterface[];
   protected: boolean;
+  // TODO: rename (inconsistent) --> potential conflict with process value in/out
   processValues: ParameterInterface[];
 }

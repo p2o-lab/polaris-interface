@@ -1,5 +1,5 @@
 
-export interface ConnectionHandlerInfo{
+export interface ConnectionInfo{
   id: string;
   name?: string;
   adapterInfo: AdapterInfo[];
@@ -8,31 +8,44 @@ export interface ConnectionHandlerInfo{
 export interface AdapterInfo {
   id: string;
   type: string;
-  name?: string;
+  name: string;
   connected: boolean;
   monitoringActive: boolean;
   monitoredItemsCount: number;
 }
 
+export interface AdapterOptions {
+  name?: string;
+}
+
+export interface OpcUaAdapterOptions extends AdapterOptions{
+  endpoint?: string;
+}
+
 export interface OpcUaAdapterInfo extends AdapterInfo{
-  type: 'OpcUa';
+  type: 'opcua';
+  endpointUrl: string;
   currentEndpointId: string | undefined;
   endpoints: OpcUaEndpointInfo[];
 }
 
 export interface OpcUaEndpointInfo{
   id: string;
-  endpointUrl: string;
   securityMode?: string;
   securityPolicy?: string;
 }
 
-export interface OpcUaEndpointSetting{
-  endpointId: string;
-  userSettings?: OpcUaUserSetting;
+export interface AdapterConnectOptions{
+  type: string;
 }
 
-export interface OpcUaUserSetting{
+export interface OpcUaEndpointOption extends AdapterConnectOptions{
+  type: 'opcua';
+  requestedEndpointId: string;
+  userCredentials?: OpcUaUserCredentials;
+}
+
+export interface OpcUaUserCredentials{
   user: string;
   password: string;
 }
