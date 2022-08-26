@@ -2,7 +2,7 @@ import {ServiceCommand} from '../service/enum';
 import {ConditionType} from './enum';
 
 /**
- * Options for loading recipes and modules
+ * Options for recipe operation
  */
 
 /**
@@ -22,12 +22,23 @@ export interface RecipeOptions {
   /** list of recipe steps */
   steps: StepOptions[];
   /** requirements for starting the recipe */
-  requirements?: {
-    /** id of PEAs to be loaded and connected to */
-    peas: string[];
-    /** state of autoreset */
-    autoreset: boolean;
+  requirements: {
+    /** Specification of PEAs used within the recipe to be assigned to concrete instances before recipe execution */
+    /** Currently Name */
+    peas: string[]; // TODO: add more complex specification or reference to PEA Specifications e.g. Types
+    /** Specification of POL Services used within the recipe to be assigned
+     * to concrete instances before recipe execution */
+    /** Currently Name */
+    polServices: string[]; // TODO: add more complex specification or reference to POLService Specifications e.g. Types
+    /** shall automatic execution of the reset command to be performed automatically once completed */
+    autoResetServicesOnceCompleted: boolean;
   };
+}
+
+export interface RecipeReferenceInstanceMappingOptions {
+  type: 'pea' | 'polService';
+  recipeObjectReference: string;
+  instanceReference: string;
 }
 
 export interface StepOptions {
@@ -42,7 +53,7 @@ export interface StepOptions {
 }
 
 export interface OperationOptions {
-  /** module id (can be omitted if only one module is registered) */
+  /** pea id (can be omitted if only one pea is registered) */
   pea?: string;
   /** service name */
   service: string;
@@ -55,7 +66,7 @@ export interface OperationOptions {
 }
 
 export interface ParameterOptions {
-  /** name of dataAssembly of parameter in module JSON */
+  /** name of dataAssembly of parameter in PEA */
   name: string;
   /** variable name of dataAssembly (default: "VExt" if omitted) */
   variable?: string;
@@ -70,10 +81,11 @@ export interface ParameterOptions {
 export interface ScopeOptions {
   /** name of variable which should be replaced in value */
   name: string;
-  /** module id (can be omitted if only one module is registered) */
+  /** PEA reference */
   pea?: string;
-  /** service name */
+  /** Service reference */
   service?: string;
+  /** Procedure reference */
   procedure?: string;
   dataAssembly: string;
   variable: string;
@@ -109,7 +121,7 @@ export interface NotConditionOptions extends BaseConditionOptions {
 
 export interface StateConditionOptions extends BaseConditionOptions {
   type: ConditionType.state;
-  // pea id (can be omitted if only one pea is registered)
+  // PEA Name
   pea?: string;
   // service name
   service: string;

@@ -1,6 +1,6 @@
 import {ServiceCommand} from '../service/enum';
 import {RecipeState, Repeat} from './enum';
-import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
+import {ConditionOptions, ParameterOptions, RecipeOptions, RecipeReferenceInstanceMappingOptions} from './options';
 
 /**
  * Details of a recipe with static and dynamic information
@@ -8,7 +8,7 @@ import {ConditionOptions, ParameterOptions, RecipeOptions} from './options';
 export interface RecipeInterface {
   id: string;
   status: RecipeState;
-  peas: string[];
+  referencedObjects: RecipeReferenceInstanceMappingOptions[];
   currentStep: StepInterface;
   options: RecipeOptions;
   protected: boolean;

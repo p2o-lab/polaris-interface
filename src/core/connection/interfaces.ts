@@ -1,6 +1,7 @@
 
 export interface ConnectionInfo{
   id: string;
+  everyAdapterConnected: boolean;
   name?: string;
   adapterInfo: AdapterInfo[];
 }
@@ -9,6 +10,7 @@ export interface AdapterInfo {
   id: string;
   type: string;
   name: string;
+  initialized: boolean;
   connected: boolean;
   monitoringActive: boolean;
   monitoredItemsCount: number;
