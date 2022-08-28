@@ -1,16 +1,16 @@
-import {ParameterInterface, ServiceInterface} from '../service/interfaces';
+import {ServiceInfo} from '../service/interfaces';
 import {ConnectionInfo} from './connection/interfaces';
+import {DataAssemblyInfo} from './dataAssembly';
 
 /** Exporting interfaces which can retrieved from backend */
 
-export interface PEAInterface {
+export interface PEAInfo {
   id: string;
   pimadIdentifier: string;
   name: string;
   description?: string;
   connectionInfo: ConnectionInfo;
-  services?: ServiceInterface[];
+  services?: ServiceInfo[];
   protected: boolean;
-  // TODO: rename (inconsistent) --> potential conflict with process value in/out
-  processValues: ParameterInterface[];
+  dataAssemblies?: DataAssemblyInfo[];
 }

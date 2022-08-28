@@ -1,5 +1,5 @@
-import {BaseServiceInterface} from '../service/interfaces';
+import {BaseServiceInfo} from '../service/interfaces';
 
-export interface POLServiceInterface extends BaseServiceInterface {
+export interface POLServiceInfo extends BaseServiceInfo {
   type: string;
 }

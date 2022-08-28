@@ -1,5 +1,19 @@
 import {OpcUaNodeOptions} from './options';
 
+export interface DataAssemblyInfo {
+  dataItems: DataItemInfo[];
+  metaModelRef: string;
+  name: string;
+  id: string;
+}
+
+export interface DataItemInfo {
+  name: string;
+  value: string;
+  lastChange?: Date;
+}
+
+
 export interface BaseDataAssemblyOptions {
   TagName: string;
   TagDescription: string;

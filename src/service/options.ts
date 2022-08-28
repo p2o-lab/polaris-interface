@@ -5,7 +5,7 @@ export interface ServiceOptions {
   name: string;
   communication: ServiceControlOptions;
   procedures: ProcedureOptions[];
-  parameters?: DataAssemblyOptions[];
+  configurationParameters?: DataAssemblyOptions[];
 }
 
 export interface ProcedureOptions {
@@ -13,7 +13,7 @@ export interface ProcedureOptions {
   name: string;
   isSelfCompleting: boolean;
   dataAssemblies: DataAssemblyOptions[];
-  parameters: DataAssemblyOptions[];
+  procedureParameters: DataAssemblyOptions[];
   reportParameters?: DataAssemblyOptions[];
   processValuesIn?: DataAssemblyOptions[];
   processValuesOut?: DataAssemblyOptions[];

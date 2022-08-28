@@ -1,10 +1,10 @@
 import {OperationMode, ServiceSourceMode} from './enum';
 
-export interface BaseServiceInterface {
+export interface BaseServiceInfo {
   id: string;
   name: string;
   state: string;
-  parameters: ParameterInterface[];
+  configurationParameters: ParameterInfo[];
   procedures: ProcedureInterface[];
   /** duration in seconds */
   lastChange: number;
@@ -13,7 +13,7 @@ export interface BaseServiceInterface {
   requestedProcedure: number;
 }
 
-export interface ServiceInterface extends BaseServiceInterface {
+export interface ServiceInfo extends BaseServiceInfo {
   peaId: string;
   operationMode: OperationMode;
   serviceSourceMode: ServiceSourceMode;
@@ -25,10 +25,10 @@ export interface ProcedureInterface {
   name: string;
   procedureId: number;
   isSelfCompleting: boolean;
-  parameters: ParameterInterface[];
-  processValuesIn: ParameterInterface[];
-  processValuesOut: ParameterInterface[];
-  reportParameters: ParameterInterface[];
+  procedureParameters: ParameterInfo[];
+  processValuesIn: ParameterInfo[];
+  processValuesOut: ParameterInfo[];
+  reportParameters: ParameterInfo[];
 }
 
 export interface CommandEnableInfo {
@@ -44,14 +44,25 @@ export interface CommandEnableInfo {
   reset: boolean;
 }
 
-export interface ParameterInterface {
+export interface ParameterInfo {
   name: string;
+  id: string;
   value?: number | string | boolean;
+  parameterType?: string;
   requestedValue?: string;
-  min?: number;
-  max?: number;
+  valueLimitation?: ValueLimitationInfo;
+  scaleSettings?: ScaleSettingsInfo;
   unit?: string;
+  wqc?: number;
   readonly?: boolean;
-  type?: string;
   timestamp?: Date;
+}
+
+export interface ValueLimitationInfo {
+  min: number;
+  max: number;
+}
+export interface ScaleSettingsInfo {
+  min: number;
+  max: number;
 }

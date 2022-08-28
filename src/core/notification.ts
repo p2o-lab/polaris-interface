@@ -1,4 +1,4 @@
-import {PEAInterface, PlayerInterface, POLServiceInterface, RecipeInterface, ServiceInterface} from '..';
+import {PEAInfo, PlayerInterface, POLServiceInfo, RecipeInterface, ServiceInfo} from '..';
 
 export type BackendNotification =
     {
@@ -11,16 +11,16 @@ export type BackendNotification =
     } |
     {
       message: 'pea';
-      pea: PEAInterface;
+      pea: PEAInfo;
     } |
     {
       message: 'service';
       peaId: string;
-      service: ServiceInterface;
+      service: ServiceInfo;
     } |
     {
       message: 'polService';
-      polService: POLServiceInterface;
+      polService: POLServiceInfo;
     } |
     {
       message: 'variable';
@@ -36,5 +36,5 @@ export interface VariableChange {
   pea: string;
   variable: string;
   value: number | string;
-  unit: string;
+  unit?: string;
 }
