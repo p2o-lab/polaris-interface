@@ -1,5 +1,4 @@
-import {ConditionOptions, OperationOptions} from '../recipe/options';
-import {ParameterInfo} from '../service/interfaces';
+import {ConditionOptions, OperationOptions, ParameterOptions} from '../recipe/options';
 
 export interface POLServiceOptions {
   name: string;
@@ -11,7 +10,7 @@ export interface AggregatedServiceOptions extends POLServiceOptions {
   description: string;
   version: string;
   necessaryServices: Array<{ pea: string; service: string; procedure: string}>;
-  parameters: ParameterInfo[];
+  parameters: ParameterOptions[];
   stateMachine: StateMachineOptions;
   commandEnable: CommandEnableOptions;
   selfCompleting: boolean;
