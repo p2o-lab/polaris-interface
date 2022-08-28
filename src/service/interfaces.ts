@@ -5,7 +5,7 @@ export interface BaseServiceInfo {
   name: string;
   state: string;
   configurationParameters: ParameterInfo[];
-  procedures: ProcedureInterface[];
+  procedures: ProcedureInfo[];
   /** duration in seconds */
   lastChange: number;
   commandEnable: CommandEnableInfo;
@@ -20,7 +20,7 @@ export interface ServiceInfo extends BaseServiceInfo {
   osLevel: number;
 }
 
-export interface ProcedureInterface {
+export interface ProcedureInfo {
   id: string;
   name: string;
   procedureId: number;
